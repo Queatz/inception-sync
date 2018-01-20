@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":sync" external.linked.project.path="$MODULE_DIR$/../../../sync" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Inception Todo" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":sync" />
+      </configuration>
+    </facet>
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../../sync/build" />
+        <option name="BUILDABLE" value="true" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../sync/build/classes/java/main" />
+    <output-test url="file://$MODULE_DIR$/../../../sync/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../sync">
+      <sourceFolder url="file://$MODULE_DIR$/../../../sync/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../sync/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../sync/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../sync/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sync/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sync/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:arangodb-java-driver:4.3.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:arangodb-java-driver:4.3.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:arangodb-java-driver:4.3.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="javax.servlet-api-4.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="javax.mail-api-1.6.0" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="arangodb-java-driver-4.3.2" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="velocypack-1.0.14" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="slf4j-api-1.7.13" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="json-simple-1.1.1" level="project" />
+  </component>
+</module>
