@@ -1,6 +1,7 @@
 package com.inceptionnotes.sync.ws;
 
 import com.inceptionnotes.sync.Server;
+import com.inceptionnotes.sync.events.Event;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,7 +23,7 @@ public class WebsocketServer extends ServerEndpointConfig.Configurator {
         server = new Server(this);
     }
 
-    public void broadcast(WebsocketClient client, String message) {
+    public void broadcast(WebsocketClient client, Event event) {
         synchronized (sessions) {
             for (WebsocketClient other : sessions) {
                 if (!other.getSession().isOpen()) {
@@ -33,20 +34,20 @@ public class WebsocketServer extends ServerEndpointConfig.Configurator {
                     continue;
                 }
 
-                other.getClient().send(message);
+                other.getClient().send(event);
             }
         }
     }
 
-    public void join(WebsocketClient chat) {
+    public void join(WebsocketClient client) {
         synchronized (sessions) {
-            sessions.add(chat);
+            sessions.add(client);
         }
     }
 
-    public void leave(WebsocketClient chat) {
+    public void leave(WebsocketClient client) {
         synchronized (sessions) {
-            sessions.remove(chat);
+            sessions.remove(client);
         }
     }
 

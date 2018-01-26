@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Inception Todo.iml" filepath="$PROJECT_DIR$/Inception Todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/inception-backend.iml" filepath="$PROJECT_DIR$/.idea/modules/inception-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sync/sync.iml" filepath="$PROJECT_DIR$/.idea/modules/sync/sync.iml" />
     </modules>
   </component>

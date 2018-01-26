@@ -2,6 +2,7 @@ package com.inceptionnotes.sync.objects;
 
 import com.arangodb.entity.DocumentField;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,6 +21,8 @@ public class Note {
     private String backgroundUrl;
     private String collapsed;
     private String estimate;
+    private Date created;
+    private Date updated;
 
     public String getId() {
         return id;
@@ -99,6 +102,24 @@ public class Note {
 
     public Note setEstimate(String estimate) {
         this.estimate = estimate;
+        return this;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public Note setCreated(Date created) {
+        this.created = created;
+        return this;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public Note setUpdated(Date updated) {
+        this.updated = updated;
         return this;
     }
 }

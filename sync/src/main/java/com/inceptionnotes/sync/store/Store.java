@@ -7,9 +7,9 @@ import com.arangodb.ArangoDatabase;
 
 public class Store {
 
-    private static final String DB_USER = "inceptionnotes";
-    private static final String DB_PASS = "inceptionnotes";
-    private static final String DB_DATABASE = "inceptionnotes";
+    private static final String DB_USER = "notes";
+    private static final String DB_PASS = "notes";
+    private static final String DB_DATABASE = "notes";
     public static final String DB_COLLECTION = "notes";
 
     private static ArangoDatabase __arangoDatabase;
