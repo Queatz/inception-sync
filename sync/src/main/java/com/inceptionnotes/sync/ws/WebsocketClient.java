@@ -29,7 +29,7 @@ public class WebsocketClient {
         Logger.getAnonymousLogger().info("WEBSOCKET (SESSION): " + session.getId());
         this.session = session;
 
-        session.setMaxIdleTimeout(MINUTES.toMillis(3));
+        session.setMaxIdleTimeout(MINUTES.toMillis(30));
         server = (Server) endpointConfig.getUserProperties().get("server");
         client = new Client(this);
         server.join(client);

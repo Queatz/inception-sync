@@ -1,5 +1,6 @@
 package com.inceptionnotes.sync;
 
+import com.inceptionnotes.sync.events.Event;
 import com.inceptionnotes.sync.ws.WebsocketServer;
 
 /**
@@ -14,8 +15,8 @@ public class Server {
         this.websocket = websocketServer;
     }
 
-    public void broadcast(Client client, String message) {
-        websocket.broadcast(client.getWebsocket(), message);
+    public void broadcast(Client client, Event event) {
+        websocket.broadcast(client.getWebsocket(), event);
     }
 
     public void join(Client client) {
