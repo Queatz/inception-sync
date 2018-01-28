@@ -13,11 +13,13 @@ public class Note {
 
     @DocumentField(DocumentField.Type.KEY)
     private String id;
+    private String version;
     private String name;
     private String description;
     private String color;
     private List<String> items;
     private List<String> ref;
+    private List<String> people;
     private String backgroundUrl;
     private String collapsed;
     private String estimate;
@@ -30,6 +32,15 @@ public class Note {
 
     public Note setId(String id) {
         this.id = id;
+        return this;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public Note setVersion(String version) {
+        this.version = version;
         return this;
     }
 
@@ -75,6 +86,15 @@ public class Note {
 
     public Note setRef(List<String> ref) {
         this.ref = ref;
+        return this;
+    }
+
+    public List<String> getPeople() {
+        return people;
+    }
+
+    public Note setPeople(List<String> people) {
+        this.people = people;
         return this;
     }
 

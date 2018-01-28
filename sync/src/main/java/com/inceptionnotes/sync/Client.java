@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class Client {
 
     private WebsocketClient websocket;
+    private String currentlyViewing;
 
     public Client(WebsocketClient websocketClient) {
         this.websocket = websocketClient;
