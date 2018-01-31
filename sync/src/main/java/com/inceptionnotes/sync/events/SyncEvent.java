@@ -17,6 +17,9 @@ public class SyncEvent extends Event {
     public void got(Client client) {
         if (client.getClientToken() == null || client.getPersonToken() == null) {
             client.send(new SimpleMessageServerEvent("hey matey. plz identify urself matey. thx matey."));
+            return;
         }
+
+        client.send(this);
     }
 }
