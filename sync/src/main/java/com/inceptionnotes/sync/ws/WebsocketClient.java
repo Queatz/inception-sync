@@ -52,7 +52,7 @@ public class WebsocketClient {
 
     @OnMessage
     public void onMessage(String message) throws IOException {
-        Logger.getAnonymousLogger().info("WEBSOCKET (MESSAGE): " + message);
+        Logger.getAnonymousLogger().info("WEBSOCKET (MESSAGE): " + (message.length() > 128 ? message.substring(0, 127) + "..." + message.length() : message));
         client.got(message);
     }
 

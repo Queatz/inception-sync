@@ -12,7 +12,6 @@ import java.util.List;
 public class SyncEvent extends Event {
 
     public String me;
-    public String timestamp;
     public List<Note> notes;
 
     @Override
