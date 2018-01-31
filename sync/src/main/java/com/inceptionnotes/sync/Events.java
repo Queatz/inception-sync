@@ -1,6 +1,8 @@
 package com.inceptionnotes.sync;
 
 import com.inceptionnotes.sync.events.Event;
+import com.inceptionnotes.sync.events.IdentifyEvent;
+import com.inceptionnotes.sync.events.SimpleMessageServerEvent;
 import com.inceptionnotes.sync.events.SyncEvent;
 
 import java.util.HashMap;
@@ -16,6 +18,8 @@ public class Events {
 
     static {
         events.put("sync", SyncEvent.class);
+        events.put("identify", IdentifyEvent.class);
+        events.put("message", SimpleMessageServerEvent.class);
 
         events.forEach((k, v) -> actions.put(v, k));
     }

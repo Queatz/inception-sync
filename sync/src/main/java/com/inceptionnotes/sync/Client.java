@@ -15,7 +15,11 @@ import java.util.logging.Logger;
 public class Client {
 
     private WebsocketClient websocket;
-    private String currentlyViewing;
+
+    // Track client state
+    private String show;
+    private String personToken;
+    private String clientToken;
 
     public Client(WebsocketClient websocketClient) {
         this.websocket = websocketClient;
@@ -61,5 +65,26 @@ public class Client {
 
     public WebsocketClient getWebsocket() {
         return websocket;
+    }
+
+    public void identify(String person, String client) {
+        this.personToken = person;
+        this.clientToken = client;
+    }
+
+    public void setShow(String show) {
+        this.show = show;
+    }
+
+    public String getShow() {
+        return show;
+    }
+
+    public String getPersonToken() {
+        return personToken;
+    }
+
+    public String getClientToken() {
+        return clientToken;
     }
 }
