@@ -2,6 +2,7 @@ package com.inceptionnotes.sync.objects;
 
 import com.arangodb.entity.DocumentField;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +15,9 @@ public class Note {
     @DocumentField(DocumentField.Type.KEY)
     private String id;
     private String version;
+    private Date created;
+    private Date updated;
+
     private String name;
     private String description;
     private String color;
@@ -23,8 +27,8 @@ public class Note {
     private String backgroundUrl;
     private String collapsed;
     private String estimate;
-    private Date created;
-    private Date updated;
+
+    private List<String> sync;
 
     public String getId() {
         return id;
@@ -141,5 +145,31 @@ public class Note {
     public Note setUpdated(Date updated) {
         this.updated = updated;
         return this;
+    }
+
+    public List<String> getSync() {
+        return sync;
+    }
+
+    public Note setSync(List<String> sync) {
+        this.sync = sync;
+        return this;
+    }
+
+    public Note toSyncNote() {
+        Note result = new Note().setId(id);
+        result.sync = new ArrayList<>();
+
+        if (name != null) result.sync.add("name");
+        if (description != null) result.sync.add("description");
+        if (color != null) result.sync.add("color");
+        if (items != null) result.sync.add("items");
+        if (ref != null) result.sync.add("ref");
+        if (people != null) result.sync.add("people");
+        if (backgroundUrl != null) result.sync.add("backgroundUrl");
+        if (collapsed != null) result.sync.add("collapsed");
+        if (estimate != null) result.sync.add("estimate");
+
+        return result;
     }
 }

@@ -3,6 +3,7 @@ package com.inceptionnotes.sync.events;
 import com.inceptionnotes.sync.Client;
 import com.inceptionnotes.sync.objects.Note;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +21,15 @@ public class SyncEvent extends Event {
             return;
         }
 
-        client.send(this);
+        // TODO: Save in db
+
+        // TODO: Update client token last sync time
+
+        SyncEvent confirmEvent = new SyncEvent();
+        confirmEvent.notes = new ArrayList<>();
+        notes.forEach(n -> confirmEvent.notes.add(n.toSyncNote()));
+        client.send(confirmEvent);
+
+        // TODO: Forward to all other active clients that need to know about each individual specific note
     }
 }
