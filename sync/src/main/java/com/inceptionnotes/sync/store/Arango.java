@@ -78,6 +78,11 @@ public class Arango {
                 // Whatever
             }
 
+            Set<String> noteIndex = new HashSet<>();
+            noteIndex.add("note");
+            __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(noteIndex, new HashIndexOptions());
+
+
             Set<String> typeIndex = new HashSet<>();
             typeIndex.add("type");
             __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(typeIndex, new HashIndexOptions());
