@@ -80,17 +80,24 @@ public class Arango {
 
             Set<String> noteIndex = new HashSet<>();
             noteIndex.add("note");
-            __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(noteIndex, new HashIndexOptions());
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(noteIndex, new HashIndexOptions());
 
+            Set<String> vlllageIdIndex = new HashSet<>();
+            noteIndex.add("vlllageId");
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(vlllageIdIndex, new HashIndexOptions());
+
+            Set<String> tokenIndex = new HashSet<>();
+            noteIndex.add("token");
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(tokenIndex, new HashIndexOptions());
 
             Set<String> typeIndex = new HashSet<>();
             typeIndex.add("type");
-            __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(typeIndex, new HashIndexOptions());
-
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(typeIndex, new HashIndexOptions());
 
             Set<String> kindIndex = new HashSet<>();
             kindIndex.add("kind");
             __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(kindIndex, new HashIndexOptions());
+            __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(kindIndex, new HashIndexOptions());
 
         }
 

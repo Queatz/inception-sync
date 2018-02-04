@@ -4,7 +4,6 @@
     <list default="true" id="56df44ef-b83f-4a76-8fca-7e3dce967f71" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,11 +109,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NoteStore.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NoteStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="132" column="39" lean-forward="false" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
+            <state relative-caret-position="511">
+              <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,11 +155,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arango.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Arango.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="485">
+              <caret line="95" column="12" lean-forward="false" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
               <folding>
                 <element signature="e#1132#1133#0" expanded="true" />
                 <element signature="e#1193#1194#0" expanded="true" />
@@ -728,8 +727,8 @@
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/ArangoDatabase.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Store.java" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" />
       </list>
     </option>
   </component>
@@ -1094,7 +1093,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517778078921" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517778275099" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -1142,7 +1141,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517778078921" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517778275099" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1400,7 +1399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517709907026</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add remaining AQL queries">
+      <created>1517778101537</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1517778101537</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1453,7 +1459,8 @@
     <MESSAGE value="Confirm note synced" />
     <MESSAGE value="Working on data model" />
     <MESSAGE value="Add main queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add main queries" />
+    <MESSAGE value="Add remaining AQL queries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add remaining AQL queries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1740,17 +1747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1761,10 +1757,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="132" column="39" lean-forward="false" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
+        <state relative-caret-position="511">
+          <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="95" column="12" lean-forward="false" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+          <folding>
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
           </folding>
         </state>
       </provider>
