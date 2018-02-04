@@ -7,6 +7,7 @@ import com.arangodb.ArangoDatabase;
 import com.arangodb.entity.CollectionType;
 import com.arangodb.entity.EdgeDefinition;
 import com.arangodb.model.CollectionCreateOptions;
+import com.arangodb.model.HashIndexOptions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,7 +31,7 @@ public class Arango {
     }
 
     public static ArangoCollection getSync() {
-        return getDb().collection(DB_COLLECTION_ENTITIES);
+        return getDb().collection(DB_COLLECTION_SYNC);
     }
 
     public static ArangoCollection getRelationships() {
@@ -76,6 +77,16 @@ public class Arango {
             } catch (ArangoDBException ignored) {
                 // Whatever
             }
+
+            Set<String> typeIndex = new HashSet<>();
+            typeIndex.add("type");
+            __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(typeIndex, new HashIndexOptions());
+
+
+            Set<String> kindIndex = new HashSet<>();
+            kindIndex.add("kind");
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(kindIndex, new HashIndexOptions());
+
         }
 
         return __arangoDatabase;
