@@ -10,9 +10,11 @@ import com.inceptionnotes.sync.ws.WebsocketServer;
 public class Server {
 
     private WebsocketServer websocket;
+    private World world;
 
     public Server(WebsocketServer websocketServer) {
         this.websocket = websocketServer;
+        this.world = new World();
     }
 
     public void broadcast(Client client, Event event) {
@@ -21,9 +23,15 @@ public class Server {
 
     public void join(Client client) {
         websocket.join(client.getWebsocket());
+        world.join(client);
     }
 
     public void leave(Client client) {
         websocket.leave(client.getWebsocket());
+        world.leave(client);
+    }
+
+    public World getWorld() {
+        return world;
     }
 }

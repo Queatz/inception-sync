@@ -75,4 +75,8 @@ public class WebsocketClient {
     public Client getClient() {
         return client;
     }
+
+    public Server getServer() {
+        return server;
+    }
 }

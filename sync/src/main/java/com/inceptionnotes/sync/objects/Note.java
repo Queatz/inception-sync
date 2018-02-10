@@ -1,6 +1,8 @@
 package com.inceptionnotes.sync.objects;
 
 import com.arangodb.entity.DocumentField;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,8 +27,8 @@ public class Note {
     private List<String> ref;
     private List<String> people;
     private String backgroundUrl;
-    private String collapsed;
-    private String estimate;
+    private Boolean collapsed;
+    private Float estimate;
 
     private List<String> sync;
 
@@ -111,20 +113,20 @@ public class Note {
         return this;
     }
 
-    public String getCollapsed() {
+    public Boolean getCollapsed() {
         return collapsed;
     }
 
-    public Note setCollapsed(String collapsed) {
+    public Note setCollapsed(Boolean collapsed) {
         this.collapsed = collapsed;
         return this;
     }
 
-    public String getEstimate() {
+    public Float getEstimate() {
         return estimate;
     }
 
-    public Note setEstimate(String estimate) {
+    public Note setEstimate(Float estimate) {
         this.estimate = estimate;
         return this;
     }
@@ -170,6 +172,26 @@ public class Note {
         if (collapsed != null) result.sync.add("collapsed");
         if (estimate != null) result.sync.add("estimate");
 
+        return result;
+    }
+
+    public void setProp(String type, JsonElement value) {
+        switch (type) {
+            case "name": setName(value.getAsString()); break;
+            case "description": setDescription(value.getAsString()); break;
+            case "color": setColor(value.getAsString()); break;
+            case "items": setItems(aToL(value.getAsJsonArray())); break;
+            case "ref": setRef(aToL(value.getAsJsonArray())); break;
+            case "people": setPeople(aToL(value.getAsJsonArray())); break;
+            case "backgroundUrl": setBackgroundUrl(value.getAsString()); break;
+            case "collapsed": setCollapsed(value.getAsBoolean()); break;
+            case "estimate": setEstimate(value.getAsFloat()); break;
+        }
+    }
+
+    private static List<String> aToL(JsonArray jsonArray) {
+        List<String> result = new ArrayList<>();
+        jsonArray.forEach(x -> result.add(x.getAsString()));
         return result;
     }
 }

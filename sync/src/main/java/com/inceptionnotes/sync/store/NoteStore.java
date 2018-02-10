@@ -3,9 +3,14 @@ package com.inceptionnotes.sync.store;
 import com.arangodb.ArangoCursor;
 import com.arangodb.entity.BaseDocument;
 import com.arangodb.model.AqlQueryOptions;
+import com.google.gson.JsonArray;
+import com.inceptionnotes.sync.Json;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Created by jacob on 2/1/18.
@@ -34,6 +39,7 @@ public class NoteStore {
             "    (FOR prop IN entities FILTER prop.note == note._id AND (\n" +
             "        FOR syncProp, sync IN OUTBOUND @client GRAPH \"state\" FILTER syncProp == prop RETURN sync\n" +
             "    )[0].version != prop.version RETURN [\n" +
+            "        prop._id,\n" +
             "        prop.type,\n" +
             "        prop.value\n" +
             "    ])\n" +
@@ -60,12 +66,17 @@ public class NoteStore {
 
     private static final String AQL_UPSERT_PROP = "UPSERT { note: @note, type: @type } INSERT { kind: 'prop', note: @note, updated: DATE_NOW(), version: 1, type: @type, value: @value } UPDATE { updated: DATE_NOW(), version: OLD.version + 1, value: @value } IN entities";
 
-    private static final String AQL_UPSERT_CLIENT_STATE = "let p = (FOR x IN entities FILTER x._id == @prop RETURN x)[0]\n" +
-            "\n" +
-            "UPSERT { _from: @client, _to: @prop }\n" +
-            "    INSERT { _from: @client, _to: @prop, updated: DATE_NOW(), version: p.version }\n" +
-            "    UPDATE { updated: DATE_NOW(), version: p.version }\n" +
-            "    IN sync";
+    private static final String AQL_UPSERT_CLIENT_STATE = "FOR p IN entities FILTER x._id == @prop\n" +
+            "    UPSERT { _from: @client, _to: @prop }\n" +
+            "        INSERT { _from: @client, _to: @prop, updated: DATE_NOW(), version: p.version }\n" +
+            "        UPDATE { updated: DATE_NOW(), version: p.version }\n" +
+            "        IN sync";
+
+    private static final String AQL_UPSERT_CLIENT_STATE_BY_NOTE_AND_TYPE = "FOR p IN entities FILTER x.@note AND x.@prop\n" +
+            "    UPSERT { _from: @client, _to: p._id }\n" +
+            "        INSERT { _from: @client, _to: p._id, updated: DATE_NOW(), version: p.version }\n" +
+            "        UPDATE { updated: DATE_NOW(), version: p.version }\n" +
+            "        IN sync";
 
     private static final String AQL_UPSERT_PERSON = "UPSERT { kind: 'person', vlllageId: @person }\n" +
             "    INSERT { kind: 'person', vlllageId: @person }\n" +
@@ -79,15 +90,28 @@ public class NoteStore {
             "    IN entities\n" +
             "    RETURN NEW";
 
-    public ArangoCursor<BaseDocument> changesUnderNoteForClientToken(String clientId, String noteId, String personId) {
+    public List<PropSet> changesUnderNoteForClientToken(String clientId, String noteId, String personId) {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_CLIENT, clientId);
         params.put(AQL_PARAM_NOTE, noteId);
         params.put(AQL_PARAM_PERSON, personId);
-        return Arango.getDb().query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, new AqlQueryOptions(), BaseDocument.class);
+        return Arango.getDb().query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, new AqlQueryOptions(), String.class).asListRemaining()
+                .stream().map(str -> {
+                    JsonArray note = Json.json.toJsonTree(str).getAsJsonArray();
+
+                    List<NoteProp> props = new ArrayList<>();
+                    note.get(1).getAsJsonArray().forEach(jsonElement -> {
+                        props.add(new NoteProp(
+                                jsonElement.getAsJsonArray().get(0).getAsString(),
+                                jsonElement.getAsJsonArray().get(1).getAsString(),
+                                jsonElement.getAsJsonArray().get(2)));
+                    });
+
+                    return new PropSet(note.get(0).getAsString(), props);
+                }).collect(Collectors.toList());
     }
 
-    public boolean noteVisibleToPersonFromEye(String eyeId, String noteId) {
+    public boolean noteVisibleFromEye(String eyeId, String noteId) {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_EYE, eyeId);
         params.put(AQL_PARAM_NOTE, noteId);
@@ -127,6 +151,15 @@ public class NoteStore {
         params.put(AQL_PARAM_CLIENT, clientId);
 
         Arango.getDb().query(AQL_UPSERT_CLIENT_STATE, params, new AqlQueryOptions(), BaseDocument.class);
+    }
+
+    public void setPropSeenByClient(String clientId, String noteId, String propType) {
+        Map<String, Object> params = new HashMap<>();
+        params.put(AQL_PARAM_NOTE, noteId);
+        params.put(AQL_PARAM_PERSON, propType);
+        params.put(AQL_PARAM_CLIENT, clientId);
+
+        Arango.getDb().query(AQL_UPSERT_CLIENT_STATE_BY_NOTE_AND_TYPE, params, new AqlQueryOptions(), BaseDocument.class);
     }
 
     public BaseDocument getPerson(String vlllageId) {
