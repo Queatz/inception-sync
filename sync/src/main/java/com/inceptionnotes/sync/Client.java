@@ -82,6 +82,8 @@ public class Client {
         this.personToken = person;
         this.clientToken = client;
 
+        Logger.getAnonymousLogger().info("CLIENT IDENTIFIED: client = " + clientToken + " person = " + personToken);
+
         // TODO convert personToken to vlllageId first here
         personId = noteStore.getPerson(personToken).getId();
         clientId = noteStore.getClient(personId, clientToken).getId();
