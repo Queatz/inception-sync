@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56df44ef-b83f-4a76-8fca-7e3dce967f71" name="Default" comment="">
+    <list default="true" id="56df44ef-b83f-4a76-8fca-7e3dce967f71" name="Default" comment="Minor query updates">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" />
     </list>
@@ -124,11 +125,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arango.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NoteStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="128" column="42" lean-forward="false" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arango.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1004">
-              <caret line="96" column="16" lean-forward="false" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
+            <state relative-caret-position="302">
+              <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
               <folding>
                 <element signature="e#4231#4232#0" expanded="true" />
                 <element signature="e#4288#4289#0" expanded="true" />
@@ -137,11 +150,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoteStore.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="754">
+              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,20 +175,11 @@
       <file leaf-file-name="NoteProp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
+            <state relative-caret-position="380">
+              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,8 +188,8 @@
       <file leaf-file-name="SyncEvent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+            <state relative-caret-position="396">
+              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -198,7 +212,6 @@
       <find>chat</find>
       <find>server</find>
       <find>L</find>
-      <find>Logger</find>
       <find>@type</find>
       <find>person</find>
       <find>changesUnderNoteForClientToken</find>
@@ -206,6 +219,17 @@
       <find>RETURN</find>
       <find>return</find>
       <find>append</find>
+      <find>NoteStore.relToProp(</find>
+      <find>Logger</find>
+      <find>n</find>
+      <find>nget</find>
+      <find>nge</find>
+      <find>.</find>
+      <find>.ge</find>
+      <find>.get</find>
+      <find>.get(</find>
+      <find>.get(1</find>
+      <find>.get(1)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -729,13 +753,13 @@
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Server.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.java" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.java" />
         <option value="$PROJECT_DIR$/sync/build.gradle" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.java" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" />
       </list>
     </option>
@@ -1105,7 +1129,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518318478276" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518330346581" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -1153,7 +1177,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518318478276" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518330346581" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1453,7 +1477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518315236860</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Minor query updates">
+      <created>1518318495702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1518318495702</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1466,14 +1497,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18353726" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11902113" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30439684" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21931697" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2145144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1512,7 +1543,8 @@
     <MESSAGE value="Query + index updates" />
     <MESSAGE value="Updates" />
     <MESSAGE value="Update relationships" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update relationships" />
+    <MESSAGE value="Minor query updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor query updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1583,9 +1615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1895,22 +1925,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+        <state relative-caret-position="380">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1925,39 +1946,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+        <state relative-caret-position="396">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="96" column="16" lean-forward="false" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
+        <state relative-caret-position="754">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
           <folding>
-            <element signature="e#4231#4232#0" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="205">
+          <caret line="128" column="42" lean-forward="false" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+          <folding>
+            <element signature="e#4231#4232#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
           </folding>
         </state>
       </provider>

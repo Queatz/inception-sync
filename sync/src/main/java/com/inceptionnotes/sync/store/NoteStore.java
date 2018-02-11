@@ -36,7 +36,7 @@ public class NoteStore {
             "    )\n" +
             ")\n" +
             "\n" +
-            "FOR note IN visible RETURN [\n" +
+            "FOR note IN visible FILTER note != null RETURN [\n" +
             "    note._key,\n" +
             "    (FOR prop IN entities FILTER prop.note == note._id AND prop.kind == 'prop' AND (\n" +
             "        FOR syncProp, sync IN OUTBOUND @client GRAPH 'state' FILTER syncProp == prop RETURN sync\n" +
@@ -47,7 +47,7 @@ public class NoteStore {
             "    ])\n" +
             "]";
 
-    private static final String AQL_QUERY_NOTE_VISIBLE_FROM_EYE = "LET visible = (FOR entity, rel IN 1..2 OUTBOUND @eye GRAPH 'graph'\n" +
+    private static final String AQL_QUERY_NOTE_VISIBLE_FROM_EYE = "LET visible = (FOR entity, rel IN 1..3 OUTBOUND @eye GRAPH 'graph'\n" +
             "  FILTER (rel.kind == 'item' OR rel.kind == 'ref')\n" +
             "  RETURN entity._id\n" +
             ")\n" +
@@ -199,5 +199,14 @@ public class NoteStore {
 
         Arango.getDb().query(AQL_UPDATE_RELATIONSHIPS_REMOVE_STEP, params, AQL_QUERY_OPTIONS, BaseDocument.class);
         Arango.getDb().query(AQL_UPDATE_RELATIONSHIPS_INSERT_STEP, params, AQL_QUERY_OPTIONS, BaseDocument.class);
+    }
+
+    public static String relToProp(String type) {
+        switch (type) {
+            case "item": return "items";
+            case "ref": return "ref";
+            case "person": return "people";
+            default: throw new RuntimeException("Unknown relationship type: " + type);
+        }
     }
 }

@@ -83,6 +83,6 @@ public class SyncEvent extends Event {
         notes.forEach(n -> confirmEvent.notes.add(n.toSyncNote()));
         client.send(confirmEvent);
 
-        notes.forEach(n -> client.getWorld().noteChanged(n));
+        notes.forEach(n -> client.getWorld().noteChanged(n, client));
     }
 }

@@ -25,7 +25,7 @@ public class World {
         clients.remove(client);
     }
 
-    public void noteChanged(Note note) {
+    public void noteChanged(Note note, Client culprit) {
         SyncEvent syncEvent = new SyncEvent();
         syncEvent.notes = new ArrayList<>();
         syncEvent.notes.add(note);
@@ -35,7 +35,11 @@ public class World {
                 return;
             }
 
-            if (!noteStore.noteVisibleFromEye(c.getShow(), note.getId())) {
+            if (!note.getId().equals(c.getShow()) && !noteStore.noteVisibleFromEye(c.getShow(), note.getId())) {
+                return;
+            }
+
+            if (culprit == c) {
                 return;
             }
 
