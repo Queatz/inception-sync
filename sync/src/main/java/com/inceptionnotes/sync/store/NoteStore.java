@@ -28,18 +28,18 @@ public class NoteStore {
     private static final String AQL_PARAM_PROP = "prop";
     private static final String AQL_PARAM_VALUE = "value";
 
-    private static final String AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE = "let visible = append(\n" +
+    private static final String AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE = "LET visible = APPEND(\n" +
             "    (FOR note IN entities FILTER note._id == @note RETURN note),\n" +
-            "    (FOR entity, rel IN 1..2 OUTBOUND @note GRAPH \"graph\"\n" +
-            "        FILTER (rel.kind == 'item' OR rel.kind == 'ref' OR (rel.kind == 'person' AND entity == @person))\n" +
+            "    (FOR entity, rel IN 1..2 OUTBOUND @note GRAPH 'graph'\n" +
+            "        FILTER (rel.kind == 'item' OR rel.kind == 'ref' OR (rel.kind == 'person' AND entity._id == @person))\n" +
             "        RETURN entity\n" +
             "    )\n" +
             ")\n" +
             "\n" +
-            "for note in visible return [\n" +
+            "FOR note IN visible RETURN [\n" +
             "    note._key,\n" +
-            "    (FOR prop IN entities FILTER prop.note == note._id AND (\n" +
-            "        FOR syncProp, sync IN OUTBOUND @client GRAPH \"state\" FILTER syncProp == prop RETURN sync\n" +
+            "    (FOR prop IN entities FILTER prop.note == note._id AND prop.kind == 'prop' AND (\n" +
+            "        FOR syncProp, sync IN OUTBOUND @client GRAPH 'state' FILTER syncProp == prop RETURN sync\n" +
             "    )[0].version != prop.version RETURN [\n" +
             "        prop._id,\n" +
             "        prop.type,\n" +
@@ -47,14 +47,14 @@ public class NoteStore {
             "    ])\n" +
             "]";
 
-    private static final String AQL_QUERY_NOTE_VISIBLE_FROM_EYE = "let visible = (FOR entity, rel IN 1..2 OUTBOUND @eye GRAPH \"graph\"\n" +
+    private static final String AQL_QUERY_NOTE_VISIBLE_FROM_EYE = "LET visible = (FOR entity, rel IN 1..2 OUTBOUND @eye GRAPH 'graph'\n" +
             "  FILTER (rel.kind == 'item' OR rel.kind == 'ref')\n" +
             "  RETURN entity._id\n" +
             ")\n" +
             "\n" +
-            "return @note in visible";
+            "RETURN @note IN visible";
 
-    private static final String AQL_QUERY_NOTE_VISIBLE_TO_PERSON = "let visible = (\n" +
+    private static final String AQL_QUERY_NOTE_VISIBLE_TO_PERSON = "LET visible = (\n" +
             "    FOR entity, rel IN 1..10 INBOUND @note GRAPH 'graph'\n" +
             "        FOR person, rel2 IN OUTBOUND entity GRAPH 'graph'\n" +
             "            FILTER (rel.kind == 'item' OR rel.kind == 'ref' OR (rel.kind == 'person' AND person._id == @person))\n" +
@@ -62,11 +62,11 @@ public class NoteStore {
             "            RETURN true\n" +
             ")\n" +
             "\n" +
-            "return visible[0] == true";
+            "RETURN visible[0] == true";
 
     private static final String AQL_UPSERT_ENSURE_NOTE_EXISTS = "UPSERT { _key: @note } INSERT { _key: @note, kind: 'note', updated: DATE_NOW(), version: 1 } UPDATE { updated: DATE_NOW(), version: OLD.version + 1 } IN entities";
 
-    private static final String AQL_UPSERT_PROP = "UPSERT { note: @note, type: @prop } INSERT { kind: 'prop', note: @note, updated: DATE_NOW(), version: 1, type: @prop, value: @value } UPDATE { updated: DATE_NOW(), version: OLD.version + 1, value: @value } IN entities";
+    private static final String AQL_UPSERT_PROP = "UPSERT { note: @note, type: @prop, kind: 'prop' } INSERT { kind: 'prop', note: @note, updated: DATE_NOW(), version: 1, type: @prop, value: @value } UPDATE { updated: DATE_NOW(), version: OLD.version + 1, value: @value } IN entities";
 
     private static final String AQL_UPSERT_CLIENT_STATE = "FOR p IN entities FILTER p._id == @prop\n" +
             "    UPSERT { _from: @client, _to: @prop }\n" +
@@ -149,10 +149,10 @@ public class NoteStore {
         Arango.getDb().query(AQL_UPSERT_ENSURE_NOTE_EXISTS, params, AQL_QUERY_OPTIONS, BaseDocument.class);
     }
 
-    public void saveNoteProp(String noteKey, String propName, Object value) {
+    public void saveNoteProp(String noteKey, String propType, Object value) {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_NOTE, Arango.id(noteKey));
-        params.put(AQL_PARAM_PROP, propName);
+        params.put(AQL_PARAM_PROP, propType);
         params.put(AQL_PARAM_VALUE, value);
 
         Arango.getDb().query(AQL_UPSERT_PROP, params, AQL_QUERY_OPTIONS, BaseDocument.class);

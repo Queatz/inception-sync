@@ -47,7 +47,7 @@ public class SyncEvent extends Event {
             if (n.getItems() != null) {
                 noteStore.saveNoteProp(n.getId(), "items", n.getItems());
                 noteStore.setPropSeenByClient(clientId, n.getId(), "items");
-                noteStore.updateRelationshipsForNoteProp(n.getId(), "items", n.getItems());
+                noteStore.updateRelationshipsForNoteProp(n.getId(), "item", n.getItems());
             }
 
             if (n.getRef() != null) {
@@ -59,7 +59,7 @@ public class SyncEvent extends Event {
             if (n.getPeople() != null) {
                 noteStore.saveNoteProp(n.getId(), "people", n.getPeople());
                 noteStore.setPropSeenByClient(clientId, n.getId(), "people");
-                noteStore.updateRelationshipsForNoteProp(n.getId(), "people", n.getPeople());
+                noteStore.updateRelationshipsForNoteProp(n.getId(), "person", n.getPeople());
             }
 
             if (n.getBackgroundUrl() != null) {
