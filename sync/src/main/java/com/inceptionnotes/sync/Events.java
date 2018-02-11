@@ -2,6 +2,7 @@ package com.inceptionnotes.sync;
 
 import com.inceptionnotes.sync.events.Event;
 import com.inceptionnotes.sync.events.IdentifyEvent;
+import com.inceptionnotes.sync.events.ShowEvent;
 import com.inceptionnotes.sync.events.SimpleMessageServerEvent;
 import com.inceptionnotes.sync.events.SyncEvent;
 
@@ -20,6 +21,7 @@ public class Events {
         events.put("sync", SyncEvent.class);
         events.put("identify", IdentifyEvent.class);
         events.put("message", SimpleMessageServerEvent.class);
+        events.put("show", ShowEvent.class);
 
         events.forEach((k, v) -> actions.put(v, k));
     }

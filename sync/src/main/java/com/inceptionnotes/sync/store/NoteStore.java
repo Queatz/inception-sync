@@ -99,7 +99,7 @@ public class NoteStore {
         params.put(AQL_PARAM_PERSON, personId);
         return Arango.getDb().query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, AQL_QUERY_OPTIONS, String.class).asListRemaining()
                 .stream().map(str -> {
-                    JsonArray note = Json.json.toJsonTree(str).getAsJsonArray();
+                    JsonArray note = Json.json.fromJson(str, JsonArray.class);
 
                     List<NoteProp> props = new ArrayList<>();
                     note.get(1).getAsJsonArray().forEach(jsonElement -> {
@@ -158,7 +158,7 @@ public class NoteStore {
     public void setPropSeenByClient(String clientId, String noteId, String propType) {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_NOTE, noteId);
-        params.put(AQL_PARAM_PERSON, propType);
+        params.put(AQL_PARAM_PROP, propType);
         params.put(AQL_PARAM_CLIENT, clientId);
 
         Arango.getDb().query(AQL_UPSERT_CLIENT_STATE_BY_NOTE_AND_TYPE, params, AQL_QUERY_OPTIONS, BaseDocument.class);

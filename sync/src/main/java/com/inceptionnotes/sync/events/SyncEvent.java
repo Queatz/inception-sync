@@ -23,55 +23,55 @@ public class SyncEvent extends Event {
         }
 
         NoteStore noteStore = client.getNoteStore();
-
-        String personId = noteStore.getPerson(client.getPersonToken()).getId();
-        String clientId = noteStore.getClient(personId, client.getClientToken()).getId();
+        String personId = client.getPersonId();
+        String clientId = client.getClientId();
 
         notes.forEach(n -> {
             noteStore.saveNote(n.getId());
+
             if (n.getName() != null) {
                 noteStore.saveNoteProp(n.getId(), "name", n.getName());
-                noteStore.setPropSeenByClient(clientId, "name");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "name");
             }
 
             if (n.getDescription() != null) {
                 noteStore.saveNoteProp(n.getId(), "description", n.getDescription());
-                noteStore.setPropSeenByClient(clientId, "description");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "description");
             }
 
             if (n.getColor() != null) {
                 noteStore.saveNoteProp(n.getId(), "color", n.getColor());
-                noteStore.setPropSeenByClient(clientId, "color");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "color");
             }
 
             if (n.getItems() != null) {
                 noteStore.saveNoteProp(n.getId(), "items", n.getItems());
-                noteStore.setPropSeenByClient(clientId, "items");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "items");
             }
 
             if (n.getRef() != null) {
                 noteStore.saveNoteProp(n.getId(), "ref", n.getRef());
-                noteStore.setPropSeenByClient(clientId, "ref");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "ref");
             }
 
             if (n.getPeople() != null) {
                 noteStore.saveNoteProp(n.getId(), "people", n.getPeople());
-                noteStore.setPropSeenByClient(clientId, "people");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "people");
             }
 
             if (n.getBackgroundUrl() != null) {
                 noteStore.saveNoteProp(n.getId(), "backgroundUrl", n.getBackgroundUrl());
-                noteStore.setPropSeenByClient(clientId, "backgroundUrl");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "backgroundUrl");
             }
 
             if (n.getCollapsed() != null) {
                 noteStore.saveNoteProp(n.getId(), "collapsed", n.getCollapsed());
-                noteStore.setPropSeenByClient(clientId, "collapsed");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "collapsed");
             }
 
             if (n.getEstimate() != null) {
                 noteStore.saveNoteProp(n.getId(), "estimate", n.getEstimate());
-                noteStore.setPropSeenByClient(clientId, "estimate");
+                noteStore.setPropSeenByClient(clientId, n.getId(), "estimate");
             }
         });
 

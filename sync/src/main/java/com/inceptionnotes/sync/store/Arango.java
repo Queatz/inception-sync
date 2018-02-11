@@ -102,4 +102,8 @@ public class Arango {
 
         return __arangoDatabase;
     }
+
+    public static String id(String key) {
+        return DB_COLLECTION_ENTITIES + "/" + key;
+    }
 }

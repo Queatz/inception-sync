@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.inceptionnotes.sync.events.Event;
 import com.inceptionnotes.sync.events.SyncEvent;
 import com.inceptionnotes.sync.objects.Note;
+import com.inceptionnotes.sync.store.Arango;
 import com.inceptionnotes.sync.store.NoteStore;
 import com.inceptionnotes.sync.store.PropSet;
 import com.inceptionnotes.sync.ws.WebsocketClient;
@@ -129,7 +130,7 @@ public class Client {
         SyncEvent syncEvent = new SyncEvent();
         syncEvent.notes = new ArrayList<>();
 
-        for (PropSet propSet : noteStore.changesUnderNoteForClientToken(clientId, show, personId)) {
+        for (PropSet propSet : noteStore.changesUnderNoteForClientToken(clientId, Arango.id(show), personId)) {
             Note note = new Note();
             note.setId(propSet.getNoteId());
 
