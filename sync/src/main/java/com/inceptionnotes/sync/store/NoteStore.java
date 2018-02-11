@@ -92,6 +92,17 @@ public class NoteStore {
             "    IN entities\n" +
             "    RETURN NEW";
 
+    private static final String AQL_UPDATE_RELATIONSHIPS_REMOVE_STEP = "FOR relationship IN relationships FILTER relationship._from == @note\n" +
+            "        AND relationship.kind == @prop\n" +
+            "        AND relationship._id NOT IN @value\n" +
+            "    REMOVE relationship IN relationships";
+
+    private static final String AQL_UPDATE_RELATIONSHIPS_INSERT_STEP = "FOR target IN @value\n" +
+            "    UPSERT { _from: @note, _to: target, kind: @prop }\n" +
+            "        INSERT { _from: @note, _to: target, kind: @prop }\n" +
+            "        UPDATE {}\n" +
+            "        IN relationships";
+
     public List<PropSet> changesUnderNoteForClientToken(String clientId, String noteId, String personId) {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_CLIENT, clientId);
@@ -113,10 +124,10 @@ public class NoteStore {
                 }).collect(Collectors.toList());
     }
 
-    public boolean noteVisibleFromEye(String eyeId, String noteId) {
+    public boolean noteVisibleFromEye(String eyeKey, String noteKey) {
         Map<String, Object> params = new HashMap<>();
-        params.put(AQL_PARAM_EYE, eyeId);
-        params.put(AQL_PARAM_NOTE, noteId);
+        params.put(AQL_PARAM_EYE, Arango.id(eyeKey));
+        params.put(AQL_PARAM_NOTE, Arango.id(noteKey));
         ArangoCursor<Boolean> result = Arango.getDb().query(AQL_QUERY_NOTE_VISIBLE_FROM_EYE, params, AQL_QUERY_OPTIONS, Boolean.class);
 
         return result.hasNext() && result.next();
@@ -140,7 +151,7 @@ public class NoteStore {
 
     public void saveNoteProp(String noteKey, String propName, Object value) {
         Map<String, Object> params = new HashMap<>();
-        params.put(AQL_PARAM_NOTE, noteKey);
+        params.put(AQL_PARAM_NOTE, Arango.id(noteKey));
         params.put(AQL_PARAM_PROP, propName);
         params.put(AQL_PARAM_VALUE, value);
 
@@ -155,9 +166,9 @@ public class NoteStore {
         Arango.getDb().query(AQL_UPSERT_CLIENT_STATE, params, AQL_QUERY_OPTIONS, BaseDocument.class);
     }
 
-    public void setPropSeenByClient(String clientId, String noteId, String propType) {
+    public void setPropSeenByClient(String clientId, String noteKey, String propType) {
         Map<String, Object> params = new HashMap<>();
-        params.put(AQL_PARAM_NOTE, noteId);
+        params.put(AQL_PARAM_NOTE, Arango.id(noteKey));
         params.put(AQL_PARAM_PROP, propType);
         params.put(AQL_PARAM_CLIENT, clientId);
 
@@ -177,5 +188,16 @@ public class NoteStore {
         params.put(AQL_PARAM_TOKEN, token);
 
         return Arango.getDb().query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, BaseDocument.class).next();
+    }
+
+    public void updateRelationshipsForNoteProp(String noteKey, String prop, List<String> relationshipKeys) {
+        Map<String, Object> params = new HashMap<>();
+        params.put(AQL_PARAM_NOTE, Arango.id(noteKey));
+        params.put(AQL_PARAM_PROP, prop);
+        params.put(AQL_PARAM_VALUE, relationshipKeys.stream()
+                .map(Arango::id).collect(Collectors.toList()));
+
+        Arango.getDb().query(AQL_UPDATE_RELATIONSHIPS_REMOVE_STEP, params, AQL_QUERY_OPTIONS, BaseDocument.class);
+        Arango.getDb().query(AQL_UPDATE_RELATIONSHIPS_INSERT_STEP, params, AQL_QUERY_OPTIONS, BaseDocument.class);
     }
 }
