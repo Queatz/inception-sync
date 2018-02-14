@@ -3,6 +3,7 @@ package com.inceptionnotes.sync;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.inceptionnotes.sync.events.Event;
+import com.inceptionnotes.sync.events.SimpleMessageServerEvent;
 import com.inceptionnotes.sync.events.SyncEvent;
 import com.inceptionnotes.sync.objects.Note;
 import com.inceptionnotes.sync.store.Arango;
@@ -20,9 +21,9 @@ import java.util.logging.Logger;
 
 public class Client {
 
-    private WebsocketClient websocket;
-    private NoteStore noteStore;
-    private World world;
+    private final WebsocketClient websocket;
+    private final NoteStore noteStore;
+    private final World world;
 
     // Track client state
     private String show;
@@ -44,11 +45,13 @@ public class Client {
         e.add(Json.json.toJsonTree(event));
         events.add(e);
 
-        try {
-            websocket.getSession().getBasicRemote().sendText(Json.json.toJson(events));
-        } catch (IOException | IllegalStateException ex) {
-            ex.printStackTrace();
-            Logger.getAnonymousLogger().warning("SEND ERROR: " + ex.getMessage());
+        synchronized(websocket) {
+            try {
+                websocket.getSession().getBasicRemote().sendText(Json.json.toJson(events));
+            } catch (IOException | IllegalStateException ex) {
+                ex.printStackTrace();
+                Logger.getAnonymousLogger().warning("SEND ERROR: " + ex.getMessage());
+            }
         }
     }
 
@@ -86,8 +89,15 @@ public class Client {
         Logger.getAnonymousLogger().info("CLIENT IDENTIFIED: client = " + clientToken + " person = " + personToken);
 
         // TODO convert personToken to vlllageId first here
-        personId = noteStore.getPerson(personToken).getId();
-        clientId = noteStore.getClient(personId, clientToken).getId();
+        if (personToken != null) {
+            personId = noteStore.getPerson(personToken).getId();
+        }
+
+        if (clientToken != null) {
+            clientId = noteStore.getClient(personId, clientToken).getId();
+        } else {
+            send(new SimpleMessageServerEvent("Cliend id is missing."));
+        }
     }
 
     public void setShow(String show) {
@@ -120,7 +130,7 @@ public class Client {
     }
 
     public boolean isIdentified() {
-        return clientToken != null && clientId != null && personToken != null && personId != null;
+        return clientToken != null && clientId != null;
     }
 
     /**

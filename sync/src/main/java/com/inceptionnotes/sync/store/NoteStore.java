@@ -31,7 +31,7 @@ public class NoteStore {
     private static final String AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE = "LET visible = APPEND(\n" +
             "    (FOR note IN entities FILTER note._id == @note RETURN note),\n" +
             "    (FOR entity, rel IN 1..2 OUTBOUND @note GRAPH 'graph'\n" +
-            "        FILTER (rel.kind == 'item' OR rel.kind == 'ref' OR (rel.kind == 'person' AND entity._id == @person))\n" +
+            "        FILTER (rel.kind == 'item' OR rel.kind == 'ref')\n" + // (... OR (rel.kind == 'person' AND entity._id == @person))
             "        RETURN entity\n" +
             "    )\n" +
             ")\n" +
@@ -107,7 +107,7 @@ public class NoteStore {
         Map<String, Object> params = new HashMap<>();
         params.put(AQL_PARAM_CLIENT, clientId);
         params.put(AQL_PARAM_NOTE, noteId);
-        params.put(AQL_PARAM_PERSON, personId);
+//        params.put(AQL_PARAM_PERSON, personId);
         return Arango.getDb().query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, AQL_QUERY_OPTIONS, String.class).asListRemaining()
                 .stream().map(str -> {
                     JsonArray note = Json.json.fromJson(str, JsonArray.class);
@@ -184,7 +184,7 @@ public class NoteStore {
 
     public BaseDocument getClient(String personId, String token) {
         Map<String, Object> params = new HashMap<>();
-        params.put(AQL_PARAM_PERSON, personId);
+        params.put(AQL_PARAM_PERSON, personId == null ? "-" : personId); // XXX Arango should allow null!
         params.put(AQL_PARAM_TOKEN, token);
 
         return Arango.getDb().query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, BaseDocument.class).next();

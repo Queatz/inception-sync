@@ -5,8 +5,8 @@ import com.inceptionnotes.sync.objects.Note;
 import com.inceptionnotes.sync.store.NoteStore;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by jacob on 2/10/18.
@@ -15,7 +15,7 @@ import java.util.Set;
 public class World {
 
     private final NoteStore noteStore = new NoteStore();
-    private final Set<Client> clients = new HashSet<>();
+    private final Set<Client> clients = ConcurrentHashMap.newKeySet();
 
     public void join(Client client) {
         clients.add(client);
