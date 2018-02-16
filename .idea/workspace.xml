@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56df44ef-b83f-4a76-8fca-7e3dce967f71" name="Default" comment="Sync stability">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_arangodb_velocypack_1_0_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_json_simple_json_simple_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_mail_javax_mail_api_1_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_4_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_websocket_javax_websocket_api_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Roadmap.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/arangodb_java_driver_4_3_2.xml" afterPath="" />
+    <list default="true" id="56df44ef-b83f-4a76-8fca-7e3dce967f71" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/sync/sync.iml" afterPath="$PROJECT_DIR$/.idea/modules/sync/sync.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Server.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.java" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Roadmap.txt" afterPath="$PROJECT_DIR$/Roadmap.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,34 +114,22 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2480">
-              <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
-              <folding>
-                <element signature="e#3533#3534#0" expanded="true" />
-                <element signature="e#3595#3596#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebsocketClient.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="116">
+              <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Note.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+              <folding>
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,6 +216,8 @@
       <find>j</find>
       <find>je</find>
       <find>jetty</find>
+      <find>tr</find>
+      <find>transient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -774,8 +749,8 @@
         <option value="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/sync/build.gradle" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/WebsocketServer.java" />
-        <option value="$PROJECT_DIR$/Roadmap.txt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.java" />
+        <option value="$PROJECT_DIR$/Roadmap.txt" />
       </list>
     </option>
   </component>
@@ -1144,7 +1119,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518669176777" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518744911417" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -1192,7 +1167,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518669176777" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518744911417" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1513,7 +1488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518580581785</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add test endpoint">
+      <created>1518669192495</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1518669192496</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1532,7 +1514,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22091782" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18196371" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2145144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1549,7 +1532,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1575,7 +1557,8 @@
     <MESSAGE value="Minor query updates" />
     <MESSAGE value="Don't send to sending client" />
     <MESSAGE value="Sync stability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sync stability" />
+    <MESSAGE value="Add test endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1595,9 +1578,8 @@
         <state relative-caret-position="360">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1606,6 +1588,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1600">
           <caret line="92" column="12" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,10 +1604,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding>
-            <element signature="e#3533#3534#0" expanded="true" />
-            <element signature="e#3595#3596#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1668,6 +1648,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1675,9 +1656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1686,9 +1665,8 @@
         <state relative-caret-position="1600">
           <caret line="100" column="25" lean-forward="false" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1870,18 +1848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/java/util/stream/Stream.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1889,17 +1855,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1907,6 +1869,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1914,6 +1880,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3980">
           <caret line="199" column="9" lean-forward="false" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1975,25 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2480">
-          <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
-          <folding>
-            <element signature="e#3533#3534#0" expanded="true" />
-            <element signature="e#3595#3596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Roadmap.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -2002,12 +1952,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Roadmap.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="580">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
           </folding>
         </state>
       </provider>
