@@ -26,6 +26,8 @@ public class SyncEvent extends Event {
         String personId = client.getPersonId();
         String clientId = client.getClientId();
 
+        List<Note> syncNotes = new ArrayList<>();
+
         notes.forEach(n -> {
             noteStore.saveNote(n.getId());
 
@@ -76,13 +78,29 @@ public class SyncEvent extends Event {
                 noteStore.saveNoteProp(n.getId(), "estimate", n.getEstimate());
                 noteStore.setPropSeenByClient(clientId, n.getId(), "estimate");
             }
+
+            syncNotes.add(n);
+
+            if (syncNotes.size() > 10) {
+                flush(client, syncNotes);
+
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
+        flush(client, syncNotes);
+
+        notes.forEach(n -> client.getWorld().noteChanged(n, client));
+    }
+
+    private void flush(Client client, List<Note> notes) {
         SyncEvent confirmEvent = new SyncEvent();
         confirmEvent.notes = new ArrayList<>();
         notes.forEach(n -> confirmEvent.notes.add(n.toSyncNote()));
         client.send(confirmEvent);
-
-        notes.forEach(n -> client.getWorld().noteChanged(n, client));
     }
 }

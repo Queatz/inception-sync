@@ -4,6 +4,7 @@ import com.arangodb.ArangoCollection;
 import com.arangodb.ArangoDB;
 import com.arangodb.ArangoDBException;
 import com.arangodb.ArangoDatabase;
+import com.arangodb.Protocol;
 import com.arangodb.entity.CollectionType;
 import com.arangodb.entity.EdgeDefinition;
 import com.arangodb.model.CollectionCreateOptions;
@@ -43,6 +44,7 @@ public class Arango {
             __arangoDatabase = new ArangoDB.Builder()
                     .user(DB_USER)
                     .password(DB_PASS)
+                    .useProtocol(Protocol.HTTP_VPACK)
                     .build()
                     .db(DB_DATABASE);
 

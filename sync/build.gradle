@@ -3,14 +3,18 @@ apply plugin: 'war'
 
 repositories {
     jcenter()
+    maven {
+        url 'https://oss.sonatype.org/content/groups/staging'
+    }
 }
 
 dependencies {
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
     implementation group: 'javax.mail', name: 'javax.mail-api', version: '1.6.0'
     implementation group: 'javax.websocket', name: 'javax.websocket-api', version: '1.1'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
     implementation 'com.google.code.gson:gson:2.8.2'
-    implementation 'com.arangodb:arangodb-java-driver:4.3.3'
+    implementation 'com.arangodb:arangodb-java-driver:4.3.4-SNAPSHOT'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

@@ -27,37 +27,77 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:arangodb-java-driver:4.3.3" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:arangodb-java-driver:4.3.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:arangodb-java-driver:4.3.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:arangodb-java-driver:4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: commons-codec:commons-codec:1.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:arangodb-java-driver:4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: commons-codec:commons-codec:1.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: javax.servlet:javax.servlet-api:4.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.mail:javax.mail-api:1.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:arangodb-java-driver:4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: commons-codec:commons-codec:1.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.arangodb:velocypack:1.0.14" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.servlet-api-4.0.0" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.mail-api-1.6.0" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="httpclient-4.5.3" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="gson-2.8.2" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="arangodb-java-driver-4.3.3" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="arangodb-java-driver-4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="httpcore-4.4.6" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="commons-codec-1.9" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="velocypack-1.0.14" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="slf4j-api-1.7.13" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="javax.servlet-api-4.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="javax.mail-api-1.6.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="httpclient-4.5.3" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="arangodb-java-driver-4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="httpcore-4.4.6" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="commons-codec-1.9" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="velocypack-1.0.14" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="slf4j-api-1.7.13" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="javax.servlet-api-4.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="javax.mail-api-1.6.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="httpclient-4.5.3" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="arangodb-java-driver-4.3.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="httpcore-4.4.6" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="commons-codec-1.9" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="velocypack-1.0.14" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="slf4j-api-1.7.13" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="json-simple-1.1.1" level="project" />
   </component>
 </module>
