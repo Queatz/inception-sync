@@ -100,6 +100,14 @@ public class Arango {
             kindIndex.add("kind");
             __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(kindIndex, new HashIndexOptions());
             __arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(kindIndex, new HashIndexOptions());
+
+            Set<String> versionIndex = new HashSet<>();
+            kindIndex.add("version");
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(versionIndex, new HashIndexOptions());
+
+            Set<String> Index = new HashSet<>();
+            kindIndex.add("version");
+            __arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(versionIndex, new HashIndexOptions());
         }
 
         return __arangoDatabase;

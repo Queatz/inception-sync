@@ -160,6 +160,7 @@ public class Note {
 
     public Note toSyncNote() {
         Note result = new Note().setId(id);
+        result.version = version;
         result.sync = new ArrayList<>();
 
         if (name != null) result.sync.add("name");
