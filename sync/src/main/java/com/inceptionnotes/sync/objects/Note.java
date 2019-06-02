@@ -28,6 +28,7 @@ public class Note {
     private List<String> people;
     private String backgroundUrl;
     private Boolean collapsed;
+    private Boolean checked;
     private Float estimate;
 
     private List<String> sync;
@@ -122,6 +123,14 @@ public class Note {
         return this;
     }
 
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
+    }
+
     public Float getEstimate() {
         return estimate;
     }
@@ -171,6 +180,7 @@ public class Note {
         if (people != null) result.sync.add("people");
         if (backgroundUrl != null) result.sync.add("backgroundUrl");
         if (collapsed != null) result.sync.add("collapsed");
+        if (checked != null) result.sync.add("checked");
         if (estimate != null) result.sync.add("estimate");
 
         return result;
@@ -186,6 +196,7 @@ public class Note {
             case "people": setPeople(aToL(value.getAsJsonArray())); break;
             case "backgroundUrl": setBackgroundUrl(value.getAsString()); break;
             case "collapsed": setCollapsed(value.getAsBoolean()); break;
+            case "checked": setChecked(value.getAsBoolean()); break;
             case "estimate": setEstimate(value.getAsFloat()); break;
         }
     }

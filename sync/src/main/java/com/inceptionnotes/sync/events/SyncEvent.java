@@ -41,6 +41,11 @@ public class SyncEvent extends Event {
                 noteStore.setPropSeenByClient(clientId, n.getId(), "description");
             }
 
+            if (n.getChecked() != null) {
+                noteStore.saveNoteProp(n.getId(), "checked", n.getChecked());
+                noteStore.setPropSeenByClient(clientId, n.getId(), "checked");
+            }
+
             if (n.getColor() != null) {
                 noteStore.saveNoteProp(n.getId(), "color", n.getColor());
                 noteStore.setPropSeenByClient(clientId, n.getId(), "color");
