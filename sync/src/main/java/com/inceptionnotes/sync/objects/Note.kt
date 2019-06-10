@@ -64,9 +64,5 @@ class Note {
         }
     }
 
-    private fun aToL(jsonArray: JsonArray): List<String> {
-        val result = ArrayList<String>()
-        jsonArray.forEach { x -> result.add(x.asString) }
-        return result
-    }
+    private fun aToL(array: JsonArray) = array.map { it.asString }
 }

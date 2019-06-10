@@ -4,9 +4,8 @@ import com.arangodb.ArangoDBException
 import com.arangodb.entity.BaseDocument
 import com.arangodb.model.AqlQueryOptions
 import com.google.gson.JsonArray
-import com.inceptionnotes.sync.Json
+import com.inceptionnotes.sync.util.Json
 import java.io.IOException
-import java.util.*
 import java.util.logging.Logger
 import java.util.stream.Collectors
 
@@ -20,11 +19,11 @@ class NoteStore {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_CLIENT] = clientId
         params[AQL_PARAM_NOTE] = noteId
-        //        params.put(AQL_PARAM_PERSON, personId);
+        params[AQL_PARAM_PERSON] = personId
 
-        try {
+        return execute(params) {
             Arango.db.query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, AQL_QUERY_OPTIONS, String::class.java).use { arangoCursor ->
-                return arangoCursor.asListRemaining()
+                arangoCursor.asListRemaining()
                         .stream().map { str ->
                             val note = Json.json.fromJson<JsonArray>(str, JsonArray::class.java)
 
@@ -39,12 +38,6 @@ class NoteStore {
                             PropSet(note.get(0).asString, props)
                         }.collect(Collectors.toList<PropSet>())
             }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -53,16 +46,10 @@ class NoteStore {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_EYE] = Arango.id(eyeKey)
         params[AQL_PARAM_NOTE] = Arango.id(noteKey)
-        try {
+        return execute(params) {
             Arango.db.query(AQL_QUERY_NOTE_VISIBLE_FROM_EYE, params, AQL_QUERY_OPTIONS, Boolean::class.java).use { arangoCursor ->
-                return arangoCursor.hasNext() && arangoCursor.next()
+                arangoCursor.hasNext() && arangoCursor.next()
             }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -71,16 +58,10 @@ class NoteStore {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_NOTE] = noteId
         params[AQL_PARAM_PERSON] = personId
-        try {
+        return execute(params) {
             Arango.db.query(AQL_QUERY_NOTE_VISIBLE_TO_PERSON, params, AQL_QUERY_OPTIONS, Boolean::class.java).use { arangoCursor ->
-                return arangoCursor.hasNext() && arangoCursor.next()
+                arangoCursor.hasNext() && arangoCursor.next()
             }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -89,14 +70,8 @@ class NoteStore {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_NOTE] = key
 
-        try {
+        return execute(params) {
             Arango.db.query(AQL_UPSERT_ENSURE_NOTE_EXISTS, params, AQL_QUERY_OPTIONS, Void::class.java).use { }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -107,14 +82,8 @@ class NoteStore {
         params[AQL_PARAM_PROP] = propType
         params[AQL_PARAM_VALUE] = value
 
-        try {
+        return execute(params) {
             Arango.db.query(AQL_UPSERT_PROP, params, AQL_QUERY_OPTIONS, Void::class.java).use { }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -124,14 +93,8 @@ class NoteStore {
         params[AQL_PARAM_PROP] = propId
         params[AQL_PARAM_CLIENT] = clientId
 
-        try {
+        return execute(params) {
             Arango.db.query(AQL_UPSERT_CLIENT_STATE, params, AQL_QUERY_OPTIONS, Void::class.java).use { }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -142,14 +105,8 @@ class NoteStore {
         params[AQL_PARAM_PROP] = propType
         params[AQL_PARAM_CLIENT] = clientId
 
-        try {
+        return execute(params) {
             Arango.db.query(AQL_UPSERT_CLIENT_STATE_BY_NOTE_AND_TYPE, params, AQL_QUERY_OPTIONS, Void::class.java).use { }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
@@ -158,16 +115,9 @@ class NoteStore {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_PERSON] = vlllageId
 
-        try {
-            Arango.db.query(AQL_UPSERT_PERSON, params, AQL_QUERY_OPTIONS, BaseDocument::class.java).use { arangoCursor -> return arangoCursor.next() }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
+        return execute(params) {
+            Arango.db.query(AQL_UPSERT_PERSON, params, AQL_QUERY_OPTIONS, BaseDocument::class.java).use { arangoCursor -> arangoCursor.next() }
         }
-
     }
 
     fun getClient(personId: String?, token: String?): BaseDocument {
@@ -175,16 +125,9 @@ class NoteStore {
         params[AQL_PARAM_PERSON] = personId
         params[AQL_PARAM_TOKEN] = token
 
-        try {
-            Arango.db.query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, BaseDocument::class.java).use { arangoCursor -> return arangoCursor.next() }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
+        return execute(params) {
+            Arango.db.query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, BaseDocument::class.java).use { arangoCursor -> arangoCursor.next() }
         }
-
     }
 
     fun updateRelationshipsForNoteProp(noteKey: String, prop: String, relationshipKeys: List<String>) {
@@ -193,29 +136,27 @@ class NoteStore {
         params[AQL_PARAM_PROP] = prop
         params[AQL_PARAM_VALUE] = relationshipKeys.stream().map { Arango.id(it) }.collect(Collectors.toList())
 
-        try {
+        execute(params) {
             Arango.db.query(AQL_UPDATE_RELATIONSHIPS_REMOVE_STEP, params, AQL_QUERY_OPTIONS, Void::class.java).use {  }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
-        try {
+        execute(params) {
             Arango.db.query(AQL_UPDATE_RELATIONSHIPS_INSERT_STEP, params, AQL_QUERY_OPTIONS, Void::class.java).use {  }
-        } catch (e: IOException) {
-            print(params)
-            throw RuntimeException(e)
-        } catch (e: ArangoDBException) {
-            print(params)
-            throw RuntimeException(e)
         }
 
     }
 
-    private fun print(map: Map<String, Any>) {
+    private fun <R> execute(params: Map<String, Any?>, block: () -> R): R = try {
+        block.invoke()
+    } catch (e: IOException) {
+        print(params)
+        throw RuntimeException(e)
+    } catch (e: ArangoDBException) {
+        print(params)
+        throw RuntimeException(e)
+    }
+
+    private fun print(map: Map<String, Any?>) {
         Logger.getAnonymousLogger().warning("map = $map")
         map.forEach { (key, value) -> Logger.getAnonymousLogger().warning("$key = $value") }
     }
@@ -235,8 +176,7 @@ class NoteStore {
         const val AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE = "LET visible = APPEND(\n" +
                 "    (FOR note IN entities FILTER note._id == @note RETURN note),\n" +
                 "    (FOR entity, rel IN 1..2 OUTBOUND @note GRAPH 'graph'\n" +
-                "        FILTER (rel.kind == 'item' OR rel.kind == 'ref')\n" + // (... OR (rel.kind == 'person' AND entity._id == @person))
-
+                "        FILTER (rel.kind == 'item' OR rel.kind == 'ref' OR (rel.kind == 'person' AND entity._id == @person))\n" +
                 "        RETURN entity\n" +
                 "    )\n" +
                 ")\n" +

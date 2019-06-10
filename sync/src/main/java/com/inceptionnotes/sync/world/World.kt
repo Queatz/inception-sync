@@ -15,18 +15,15 @@ class World {
     private val noteStore = NoteStore()
     private val clients = ConcurrentHashMap.newKeySet<Client>()
 
-    fun join(client: Client) {
-        clients.add(client)
-    }
+    fun join(client: Client) = synchronized(clients) { clients.add(client) }
 
-    fun leave(client: Client) {
-        clients.remove(client)
-    }
+    fun leave(client: Client) = synchronized(clients) { clients.remove(client) }
 
-    fun noteChanged(note: Note, culprit: Client) {
-        val syncEvent = SyncEvent()
-        syncEvent.notes = ArrayList()
-        syncEvent.notes.add(note)
+    fun onNoteChanged(note: Note, culprit: Client) = synchronized(clients) {
+        val syncEvent = SyncEvent().apply {
+            notes = ArrayList()
+            notes.add(note)
+        }
 
         clients.forEach { client ->
             if (!client.isIdentified || client.show == null) {

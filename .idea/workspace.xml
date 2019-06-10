@@ -9,90 +9,46 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56a07799-4501-442d-9771-2d4bd4ad4a8b" name="Default" comment="Also send note version on sync confirm">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jacob.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__byte_buddy_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__byte_buddy_agent_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_nhaarman_mockitokotlin2_mockito_kotlin_2_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_common_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_jdk7_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_jdk8_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_core_2_23_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_kotlin_2_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_3_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_2_23_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Json.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/Event.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt" afterDir="false" />
+    <list default="true" id="56a07799-4501-442d-9771-2d4bd4ad4a8b" name="Default" comment="Kotlin">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__arangodb_java_driver_5_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_arangodb_arangodb_java_driver_5_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_arangodb_velocypack_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jackson_core_2_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_inline_2_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_inline_2_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__velocypack_1_4_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__arangodb_java_driver_4_3_4_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__velocypack_1_0_14.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inception-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/inception-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sync/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sync/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Json.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Events.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Json.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Json.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sync/sync.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sync/sync.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -133,25 +89,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="inception-backend" type="f1a62948:ProjectNode" />
                 <item name="inception-backend" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name=":sync" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name=":sync" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="inception-backend" type="f1a62948:ProjectNode" />
                 <item name=":sync" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -163,22 +106,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt">
+        <entry file="file://$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="572">
+              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
-                <element signature="e#33#424#0" expanded="true" />
+                <element signature="e#39#357#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sync/build.gradle">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+            <state relative-caret-position="520">
+              <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#39#347#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,6 +153,13 @@
       <find>world</find>
       <find>_arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(versionIndex, new HashIndexOptions());</find>
       <find>Arango.db.query</find>
+      <find>ClientToken</find>
+      <find>Relationship</find>
+      <find>getannon</find>
+      <find>getAnonymousLogger</find>
+      <find>websocketserver</find>
+      <find>print</find>
+      <find>//</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,27 +182,29 @@
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt" />
+        <option value="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/sync/build.gradle" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" />
-        <option value="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt" />
-        <option value="$PROJECT_DIR$/sync/build.gradle" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" />
+        <option value="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1145" />
+    <option name="x" value="1144" />
     <option name="width" value="2208" />
     <option name="height" value="1080" />
   </component>
@@ -337,19 +301,7 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="inceptionnotes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="objects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="inception-backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="inceptionnotes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="store" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="util" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="inception-backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -420,6 +372,18 @@
               <item name="inceptionnotes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="inception-backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="inceptionnotes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sync" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="world" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -451,11 +415,15 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.inceptionnotes.sync" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.inceptionnotes.sync.world" />
+      <recent name="com.inceptionnotes.sync.util" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -473,7 +441,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.WorldTest">
+  <component name="RunManager" selected="Android JUnit.WorldTest (1)">
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -516,10 +484,17 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in sync" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorldTest (1)" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="sync" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inceptionnotes.sync.world.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inceptionnotes.sync.world" />
+      <option name="MAIN_CLASS_NAME" value="com.inceptionnotes.sync.world.WorldTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -541,6 +516,23 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WorldTest.noteChanged" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sync" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inceptionnotes.sync.world.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inceptionnotes.sync.world" />
+      <option name="MAIN_CLASS_NAME" value="com.inceptionnotes.sync.world.WorldTest" />
+      <option name="METHOD_NAME" value="noteChanged" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -553,25 +545,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="inception-backend [war]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="war" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="inception-backend:sync [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -603,11 +576,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.WorldTest (1)" />
         <item itemvalue="Android JUnit.WorldTest" />
+        <item itemvalue="Android JUnit.WorldTest.noteChanged" />
         <item itemvalue="Android JUnit.All in sync (1)" />
         <item itemvalue="Gradle.inception-backend:sync [test]" />
-        <item itemvalue="Android JUnit.All in sync" />
-        <item itemvalue="Gradle.inception-backend [war]" />
       </list>
     </recent_temporary>
   </component>
@@ -629,43 +602,50 @@
       <option name="project" value="LOCAL" />
       <updated>1541975175316</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Kotlin">
+      <created>1560110215974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560110215974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WorldTest - 2019.06.09 at 09h 43m 55s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 50m 31s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 44m 06s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 50m 52s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 48m 02s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 51m 15s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 50m 03s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 07s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 52m 29s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 13s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 52m 42s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 40s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 53m 02s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 44s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 09h 53m 22s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 51s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 14h 50m 10s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 55m 38s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="WorldTest - 2019.06.09 at 14h 54m 22s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
+    <history-entry file="WorldTest_(1) - 2019.06.09 at 20h 00m 40s.xml">
+      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1145" y="0" width="2208" height="1080" extended-state="0" />
+    <frame x="1144" y="0" width="2208" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Build Variants" order="0" side_tool="true" />
@@ -673,19 +653,19 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Captures" order="3" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="7" />
       <window_info id="Resources Explorer" order="8" weight="0.32960597" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32938644" />
       <window_info anchor="bottom" id="Android Monitor" order="1" visible="true" weight="0.4746336" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32919955" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32938644" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.39612487" />
       <window_info anchor="bottom" id="Gradle Console" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.2863294" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.1679225" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39289558" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -695,7 +675,7 @@
       <window_info anchor="right" id="Android Model" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Preview" order="2" weight="0.32959402" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.17082179" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.17082179" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
@@ -703,12 +683,56 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Also send note version on sync confirm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Also send note version on sync confirm" />
+    <MESSAGE value="Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kotlin" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>captor.allValues</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>websocket.getServer().getWorld()</expression-string>
         <language-id>JAVA</language-id>
@@ -752,189 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#33#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Json.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/util/Synchronized.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/Event.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-          <folding>
-            <element signature="e#39#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="106" column="21" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Closeable.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="e#39#340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#36#281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#41#168#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,20 +790,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/WorldTest.kt">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state relative-caret-position="104">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/java/util/HashSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
           <folding>
-            <element signature="e#33#424#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/b2da9f8444128651758719856de579eacff7f387/gson-2.8.2-sources.jar!/com/google/gson/JsonElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Json.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Events.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+          <folding>
+            <element signature="e#37#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/958c401b129f64de74af4b11a0894693edfa168d/kotlin-stdlib-common-1.3.31-sources.jar!/kotlin/util/Standard.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/4.3.4-SNAPSHOT/e04c2be91770115cd3bda3997abbed7cd9844cbb/arangodb-java-driver-4.3.4-SNAPSHOT-sources.jar!/com/arangodb/ArangoDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="361" column="7" lean-forward="true" selection-start-line="361" selection-start-column="7" selection-end-line="361" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Closeable.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Console.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sync/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        <state relative-caret-position="364">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/5.0.5/9dbff5a7555d25bc1ca09bcaf213517a187d9295/arangodb-java-driver-5.0.5-sources.jar!/com/arangodb/internal/InternalArangoDBBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/958c401b129f64de74af4b11a0894693edfa168d/kotlin-stdlib-common-1.3.31-sources.jar!/kotlin/util/Lazy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/5.0.5/9dbff5a7555d25bc1ca09bcaf213517a187d9295/arangodb-java-driver-5.0.5-sources.jar!/com/arangodb/ArangoDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="616" selection-start-line="616" selection-end-line="616" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="e#39#256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.0/cdd452f898001f5dc35448c623e16bde4f4817c6/mockito-core-2.23.0-sources.jar!/org/mockito/ArgumentCaptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/ArgumentCaptor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <element signature="e#41#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/Event.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="178" column="124" lean-forward="true" selection-start-line="178" selection-start-column="124" selection-end-line="178" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#39#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="e#39#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
         </state>
       </provider>
     </entry>

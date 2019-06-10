@@ -2,7 +2,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="4.0">
     <servlet>
         <servlet-name>InceptionNotesSync</servlet-name>
-        <servlet-class>com.inceptionnotes.sync.InceptionNotesSync</servlet-class>
+        <servlet-class>com.inceptionnotes.sync.util.InceptionNotesSync</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InceptionNotesSync</servlet-name>

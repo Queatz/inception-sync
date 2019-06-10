@@ -1,4 +1,4 @@
-package com.inceptionnotes.sync
+package com.inceptionnotes.sync.util
 
 import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest

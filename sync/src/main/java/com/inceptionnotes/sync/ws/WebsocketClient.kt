@@ -1,11 +1,13 @@
 package com.inceptionnotes.sync.ws
 
 
+import com.google.gson.JsonArray
+import com.inceptionnotes.sync.util.Events
+import com.inceptionnotes.sync.util.Json
 import com.inceptionnotes.sync.world.Client
 import com.inceptionnotes.sync.world.Server
 import java.io.IOException
 import java.util.concurrent.TimeUnit.MINUTES
-import java.util.logging.Logger
 import javax.websocket.*
 import javax.websocket.server.ServerEndpoint
 
@@ -21,29 +23,42 @@ class WebsocketClient {
 
     @OnOpen
     fun onOpen(session: Session, endpointConfig: EndpointConfig) {
-        Logger.getAnonymousLogger().info("WEBSOCKET (SESSION): " + session.id)
         this.session = session
 
         session.maxIdleTimeout = MINUTES.toMillis(30)
         server = endpointConfig.userProperties["server"] as Server
-        client = Client(this)
+        client = Client(server.world) {
+            synchronized(this) {
+                try {
+                    val events = JsonArray()
+                    val event = JsonArray()
+                    event.add(Events.actions[it.javaClass])
+                    event.add(Json.json.toJsonTree(it))
+                    events.add(event)
+
+                    session.basicRemote.sendText(Json.json.toJson(events))
+                } catch (ex: IOException) {
+                    ex.printStackTrace()
+                } catch (ex: IllegalStateException) {
+                    ex.printStackTrace()
+                }
+            }
+        }
+
         server.join(client)
+        client.open()
     }
 
     @OnClose
     fun onClose() {
-        if (session.isOpen) {
-            try {
-                session.close()
-            } catch (e: IOException) {
-                e.printStackTrace()
-            } catch (e: IllegalStateException) {
-                e.printStackTrace()
-            }
-
+        if (session.isOpen) try {
+            session.close()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        } catch (e: IllegalStateException) {
+            e.printStackTrace()
         }
 
-        Logger.getAnonymousLogger().info("WEBSOCKET: END")
         server.leave(client)
         client.close()
     }
@@ -51,21 +66,25 @@ class WebsocketClient {
     @OnMessage
     @Throws(IOException::class)
     fun onMessage(message: String) {
-        Logger.getAnonymousLogger().info("WEBSOCKET (MESSAGE): " + if (message.length > 128) message.substring(0, 127) + "..." + message.length else message)
-        client.got(message)
+        val events = Json.json.fromJson(message, JsonArray::class.java)
+
+        for (event in events) {
+            client.got(Json.json.fromJson(
+                    event.asJsonArray.get(1),
+                    Events.events[event.asJsonArray.get(0).asString]
+            ))
+        }
     }
 
     @OnMessage
     @Throws(IOException::class)
     fun onData(data: ByteArray) {
-        Logger.getAnonymousLogger().info("WEBSOCKET (DATA): " + data.size)
-        client.got(data)
+        // Do nothing
     }
 
     @OnError
     @Throws(Throwable::class)
     fun onError(t: Throwable) {
-        Logger.getAnonymousLogger().info("WEBSOCKET (ERROR): " + t.message)
         t.printStackTrace()
     }
 }

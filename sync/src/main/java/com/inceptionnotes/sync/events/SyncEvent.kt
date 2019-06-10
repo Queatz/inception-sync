@@ -19,7 +19,6 @@ class SyncEvent : Event {
         }
 
         val noteStore = client.noteStore
-        val personId = client.personId
         val clientId = client.clientId!!
 
         val syncNotes = ArrayList<Note>()
@@ -87,19 +86,12 @@ class SyncEvent : Event {
 
             if (syncNotes.size > 10) {
                 flush(client, syncNotes)
-
-                try {
-                    Thread.sleep(100)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-
             }
         }
 
         flush(client, syncNotes)
 
-        notes.forEach { n -> client.world.noteChanged(n, client) }
+        notes.forEach { n -> client.world.onNoteChanged(n, client) }
     }
 
     private fun flush(client: Client, notes: List<Note>) {

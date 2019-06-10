@@ -19,8 +19,6 @@ object Arango {
     private const val DB_GRAPH = "graph"
     private const val DB_CLIENT_STATE_GRAPH = "state"
 
-    private lateinit var arangoDatabase: ArangoDatabase
-
     val entities: ArangoCollection
         get() = db.collection(DB_COLLECTION_ENTITIES)
 
@@ -30,20 +28,18 @@ object Arango {
     val relationships: ArangoCollection
         get() = db.collection(DB_COLLECTION_RELATIONSHIPS)
 
-    val db: ArangoDatabase
-        get() {
-            if (!this::arangoDatabase.isInitialized) {
-                arangoDatabase = ArangoDB.Builder()
+    val db: ArangoDatabase by lazy {
+                val arangoDatabase = ArangoDB.Builder()
                         .user(DB_USER)
                         .password(DB_PASS)
                         .useProtocol(Protocol.HTTP_VPACK)
+                        .acquireHostList(false)
                         .build()
                         .db(DB_DATABASE)
 
                 try {
                     arangoDatabase.createCollection(DB_COLLECTION_ENTITIES)
-                } catch (ignored: ArangoDBException) {
-                }
+                } catch (ignored: ArangoDBException) {}
 
                 try {
                     val edges = HashSet<EdgeDefinition>()
@@ -54,8 +50,7 @@ object Arango {
 
                     arangoDatabase.createCollection(DB_COLLECTION_RELATIONSHIPS, CollectionCreateOptions().type(CollectionType.EDGES))
                     arangoDatabase.createGraph(DB_GRAPH, edges)
-                } catch (ignored: ArangoDBException) {
-                }
+                } catch (ignored: ArangoDBException) {}
 
                 try {
                     val edges = HashSet<EdgeDefinition>()
@@ -66,8 +61,7 @@ object Arango {
 
                     arangoDatabase.createCollection(DB_COLLECTION_SYNC, CollectionCreateOptions().type(CollectionType.EDGES))
                     arangoDatabase.createGraph(DB_CLIENT_STATE_GRAPH, edges)
-                } catch (ignored: ArangoDBException) {
-                }
+                } catch (ignored: ArangoDBException) {}
 
                 val noteIndex = HashSet<String>()
                 noteIndex.add("note")
@@ -91,11 +85,10 @@ object Arango {
                 arangoDatabase.collection(DB_COLLECTION_RELATIONSHIPS).ensureHashIndex(kindIndex, HashIndexOptions())
 
                 val versionIndex = HashSet<String>()
-                kindIndex.add("version")
+                versionIndex.add("version")
                 arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(versionIndex, HashIndexOptions())
-            }
 
-            return arangoDatabase
+            arangoDatabase
         }
 
     fun id(key: String) = "$DB_COLLECTION_ENTITIES/$key"
