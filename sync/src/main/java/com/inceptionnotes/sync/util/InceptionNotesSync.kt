@@ -27,7 +27,6 @@ class InceptionNotesSync : HttpServlet() {
 
         if (req.getHeader(HttpHeaders.AUTHORIZATION) == null) {
             resp.status = HttpStatus.SC_UNAUTHORIZED
-            resp.writer.write("omg heyy")
             resp.writer.close()
             return
         }
@@ -44,6 +43,7 @@ class InceptionNotesSync : HttpServlet() {
 
     override fun doOptions(req: HttpServletRequest, resp: HttpServletResponse) {
         addMainHeaders(resp)
+        resp.writer.close()
     }
 
     private fun addMainHeaders(resp: HttpServletResponse) {

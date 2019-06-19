@@ -31,7 +31,7 @@ class WebsocketClient {
     fun onOpen(session: Session, endpointConfig: EndpointConfig) {
         this.session = session
 
-        session.maxIdleTimeout = MINUTES.toMillis(30)
+        session.maxIdleTimeout = MINUTES.toMillis(5)
         server = endpointConfig.userProperties["server"] as Server
         client = Client(server.on, server.world, {
             clientToken = it
@@ -45,7 +45,7 @@ class WebsocketClient {
         client.open()
     }
 
-    private fun onHttpMessage(message: String): String? {
+    private fun onHttpMessage(message: String): String {
         val events = Json.json.fromJson(message, JsonArray::class.java)
 
         for (event in events) {
@@ -55,7 +55,9 @@ class WebsocketClient {
             ))
         }
 
-        return outboxToString()
+        val response = outboxToString()
+        outbox.clear()
+        return response
     }
 
     private fun outboxToString(): String {
@@ -72,27 +74,30 @@ class WebsocketClient {
     }
 
     private fun flushOutbox() {
-        synchronized(this) {
-            try {
-                val outboxString = outboxToString()
+        try {
+            val outboxString = outboxToString()
 
-                if (outboxString.length < 1000) {
-                    session.basicRemote.sendText(outboxString)
-                } else {
-                    val events = JsonArray()
-                    val event = JsonArray()
-                    val serverEvent = ServerEvent("fetch")
-                    event.add(Events.actions[serverEvent::class.java])
-                    event.add(Json.json.toJsonTree(serverEvent))
-                    events.add(event)
-                    session.basicRemote.sendText(Json.json.toJson(events))
-                }
-            } catch (ex: IOException) {
-                ex.printStackTrace()
-            } catch (ex: IllegalStateException) {
-                ex.printStackTrace()
+            if (outboxString.length < 1000) {
+                session.basicRemote.sendText(outboxString)
+                outbox.clear()
+            } else {
+                requestHttp()
             }
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+        } catch (ex: IllegalStateException) {
+            ex.printStackTrace()
         }
+    }
+
+    private fun requestHttp() {
+        val events = JsonArray()
+        val event = JsonArray()
+        val serverEvent = ServerEvent("fetch")
+        event.add(Events.actions[serverEvent::class.java])
+        event.add(Json.json.toJsonTree(serverEvent))
+        events.add(event)
+        session.basicRemote.sendText(Json.json.toJson(events))
     }
 
     @OnClose
