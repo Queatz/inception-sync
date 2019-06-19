@@ -83,21 +83,20 @@ class SyncEvent : Event {
             }
 
             syncNotes.add(note)
-
-            if (syncNotes.size > 10) {
-                flush(client, syncNotes)
-            }
         }
 
         flush(client, syncNotes)
 
-        notes.forEach { n -> client.world.onNoteChanged(n, client) }
+        client.world.onNotesChanged(notes, client)
     }
 
     private fun flush(client: Client, notes: List<Note>) {
         val confirmEvent = SyncEvent()
         confirmEvent.notes = ArrayList()
         notes.forEach { n -> confirmEvent.notes.add(n.toSyncNote()) }
-        client.send(confirmEvent)
+
+        if (confirmEvent.notes.isNotEmpty()) {
+            client.send(confirmEvent)
+        }
     }
 }

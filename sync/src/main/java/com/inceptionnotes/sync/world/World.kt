@@ -4,7 +4,6 @@ import com.inceptionnotes.sync.events.SyncEvent
 import com.inceptionnotes.sync.objects.Note
 import com.inceptionnotes.sync.store.NoteStore
 import com.queatz.on.On
-import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 
 /**
@@ -19,18 +18,9 @@ class World(private val on: On) {
 
     fun leave(client: Client) = synchronized(clients) { clients.remove(client) }
 
-    fun onNoteChanged(note: Note, culprit: Client) = synchronized(clients) {
-        val syncEvent = SyncEvent().apply {
-            notes = ArrayList()
-            notes.add(note)
-        }
-
+    fun onNotesChanged(notes: List<Note>, culprit: Client) = synchronized(clients) {
         clients.forEach { client ->
             if (!client.isIdentified || client.show == null) {
-                return@forEach
-            }
-
-            if (note.id != client.show && !on<NoteStore>().noteVisibleFromEye(client.show!!, note.id!!)) {
                 return@forEach
             }
 
@@ -38,10 +28,20 @@ class World(private val on: On) {
                 return@forEach
             }
 
+            val syncEvent = SyncEvent()
+
+            notes.forEach { note ->
+                if (note.id == client.show || on<NoteStore>().noteVisibleFromEye(client.show!!, note.id!!)) {
+                    syncEvent.notes.add(note)
+                }
+            }
+
             client.send(syncEvent)
 
-            note.toSyncNote().sync!!.forEach {
-                prop -> on<NoteStore>().setPropSeenByClient(client.clientId!!, note.id!!, prop)
+            syncEvent.notes.forEach { note ->
+                note.toSyncNote().sync?.forEach {
+                    prop -> on<NoteStore>().setPropSeenByClient(client.clientId!!, note.id!!, prop)
+                }
             }
         }
     }
