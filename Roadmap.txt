@@ -1,18 +1,25 @@
-See for WebSockets:
-https://stackoverflow.com/a/35141086/2938945
 
-<VirtualHost *:443>
-  ServerName sync.inceptionnotes.com
+HTTP/WS Hybrid Architecture
 
-  RewriteEngine On
-  RewriteCond %{HTTP:Upgrade} =websocket [NC]
-  RewriteRule /(.*)           wss://localhost:8443/$1 [P,L]
-  RewriteCond %{HTTP:Upgrade} !=websocket [NC]
-  RewriteRule /(.*)           https://localhost:8443/$1 [P,L]
 
-  ProxyPassReverse / http://localhost:8443/
-</VirtualHost>
 
-db._createDatabase('notes')
-require('@arangodb/users').save('notes', 'notes')
-require('@arangodb/users').grantDatabase('notes', 'notes')
+Client
+======
+
+send(messages)
+    if messages > 10
+        http callw
+            X-Inception-Identify: {identify}
+    else
+        ws ensure identified
+            ws call
+
+
+Server
+======
+
+send(messages)
+    if messages > 10
+        ws {outstanding}
+    else
+        ws call

@@ -3,6 +3,7 @@ package com.inceptionnotes.sync.world
 import com.inceptionnotes.sync.events.SyncEvent
 import com.inceptionnotes.sync.objects.Note
 import com.inceptionnotes.sync.store.NoteStore
+import com.queatz.on.On
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 
@@ -10,9 +11,8 @@ import java.util.concurrent.ConcurrentHashMap
  * Created by jacob on 2/10/18.
  */
 
-class World {
+class World(private val on: On) {
 
-    private val noteStore = NoteStore()
     private val clients = ConcurrentHashMap.newKeySet<Client>()
 
     fun join(client: Client) = synchronized(clients) { clients.add(client) }
@@ -30,7 +30,7 @@ class World {
                 return@forEach
             }
 
-            if (note.id != client.show && !noteStore.noteVisibleFromEye(client.show!!, note.id!!)) {
+            if (note.id != client.show && !on<NoteStore>().noteVisibleFromEye(client.show!!, note.id!!)) {
                 return@forEach
             }
 
@@ -41,7 +41,7 @@ class World {
             client.send(syncEvent)
 
             note.toSyncNote().sync!!.forEach {
-                prop -> noteStore.setPropSeenByClient(client.clientId!!, note.id!!, prop)
+                prop -> on<NoteStore>().setPropSeenByClient(client.clientId!!, note.id!!, prop)
             }
         }
     }

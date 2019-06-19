@@ -6,16 +6,16 @@ import com.inceptionnotes.sync.events.SyncEvent
 import com.inceptionnotes.sync.objects.Note
 import com.inceptionnotes.sync.store.Arango
 import com.inceptionnotes.sync.store.NoteStore
+import com.queatz.on.On
 import java.util.*
 
 /**
  * Created by jacob on 1/20/18.
  */
 
-class Client constructor(val world: World,
+class Client constructor(internal val on: On, val world: World,
+                         private val onClientIdentified: (String) -> Unit,
                          private val onSendMessage: (Event) -> Unit) {
-    val noteStore = NoteStore()
-
     // Track client state
     var show: String? = null
         set(value) {
@@ -43,11 +43,11 @@ class Client constructor(val world: World,
     }
 
     fun open() {
-        // Do nothing
+
     }
 
     fun close() {
-        // Do nothing
+
     }
 
     fun identify(person: String?, client: String?) {
@@ -55,10 +55,11 @@ class Client constructor(val world: World,
         clientToken = client
 
         // TODO convert personToken to vlllageId first here
-        personToken?.let { personId = noteStore.getPerson(it).id }
+        personToken?.let { personId = on<NoteStore>().getPerson(it).id }
 
         clientToken?.let {
-            clientId = noteStore.getClient(personId, it).id
+            onClientIdentified(it)
+            clientId = on<NoteStore>().getClient(personId, it).id
         } ?: run {
             send(SimpleMessageServerEvent("Client id is missing."))
         }
@@ -78,13 +79,13 @@ class Client constructor(val world: World,
         val clientId = clientId!!
         val show = show!!
 
-        for (propSet in noteStore.changesUnderNoteForClientToken(clientId, Arango.id(show), personId)) {
+        for (propSet in on<NoteStore>().changesUnderNoteForClientToken(clientId, Arango.id(show), personId)) {
             val note = Note()
             note.id = propSet.noteId
 
             propSet.props.forEach { noteProp ->
                 note.setProp(noteProp.type, noteProp.value)
-                noteStore.setPropSeenByClient(clientId, noteProp.id)
+                on<NoteStore>().setPropSeenByClient(clientId, noteProp.id)
             }
 
             syncEvent.notes.add(note)

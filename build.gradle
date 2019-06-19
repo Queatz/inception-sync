@@ -4,6 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://oss.sonatype.org/content/groups/staging' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
@@ -15,6 +16,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

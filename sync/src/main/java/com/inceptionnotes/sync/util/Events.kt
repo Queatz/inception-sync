@@ -16,6 +16,7 @@ object Events {
         events["identify"] = IdentifyEvent::class.java
         events["message"] = SimpleMessageServerEvent::class.java
         events["show"] = ShowEvent::class.java
+        events["server"] = ServerEvent::class.java
 
         events.forEach { (k, v) -> actions[v] = k }
     }

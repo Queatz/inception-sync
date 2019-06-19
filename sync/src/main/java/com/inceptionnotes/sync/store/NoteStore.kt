@@ -5,6 +5,7 @@ import com.arangodb.entity.BaseDocument
 import com.arangodb.model.AqlQueryOptions
 import com.google.gson.JsonArray
 import com.inceptionnotes.sync.util.Json
+import com.queatz.on.On
 import java.io.IOException
 import java.util.logging.Logger
 import java.util.stream.Collectors
@@ -13,7 +14,7 @@ import java.util.stream.Collectors
  * Created by jacob on 2/1/18.
  */
 
-class NoteStore {
+class NoteStore(on: On) {
 
     fun changesUnderNoteForClientToken(clientId: String, noteId: String, personId: String?): List<PropSet> {
         val params = HashMap<String, Any?>()

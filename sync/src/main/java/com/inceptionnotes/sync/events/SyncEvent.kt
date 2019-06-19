@@ -1,6 +1,7 @@
 package com.inceptionnotes.sync.events
 
 import com.inceptionnotes.sync.objects.Note
+import com.inceptionnotes.sync.store.NoteStore
 import com.inceptionnotes.sync.world.Client
 import java.util.*
 
@@ -18,13 +19,12 @@ class SyncEvent : Event {
             return
         }
 
-        val noteStore = client.noteStore
+        val noteStore = client.on<NoteStore>()
         val clientId = client.clientId!!
 
         val syncNotes = ArrayList<Note>()
 
         notes.forEach { note ->
-
             note.id?.let { id ->
                 noteStore.saveNote(id)
 

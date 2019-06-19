@@ -1,6 +1,7 @@
 package com.inceptionnotes.sync.ws
 
 import com.inceptionnotes.sync.world.Server
+import com.queatz.on.On
 import javax.websocket.HandshakeResponse
 import javax.websocket.server.HandshakeRequest
 import javax.websocket.server.ServerEndpointConfig
@@ -11,7 +12,11 @@ import javax.websocket.server.ServerEndpointConfig
 
 class WebsocketServer : ServerEndpointConfig.Configurator() {
 
-    private val server = Server()
+    companion object {
+        internal val on = On()
+    }
+
+    private val server = Server(on)
 
     override fun modifyHandshake(conf: ServerEndpointConfig, req: HandshakeRequest, resp: HandshakeResponse) {
         conf.userProperties["server"] = server

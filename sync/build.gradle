@@ -3,13 +3,6 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'war'
 
-repositories {
-    jcenter()
-    maven {
-        url 'https://oss.sonatype.org/content/groups/staging'
-    }
-}
-
 dependencies {
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
     implementation group: 'javax.mail', name: 'javax.mail-api', version: '1.6.0'
@@ -17,6 +10,7 @@ dependencies {
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.arangodb:arangodb-java-driver:5.0.5'
+    implementation 'com.github.Queatz:On:0.1.4'
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.16.0'
     testImplementation 'org.mockito:mockito-inline:2.16.0'

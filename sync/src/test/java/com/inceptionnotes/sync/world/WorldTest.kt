@@ -12,7 +12,7 @@ import org.junit.Test
 
 class WorldTest {
 
-    private val server = Server()
+    private val server = Server(on)
     private lateinit var client: ClientTest
 
     @Before

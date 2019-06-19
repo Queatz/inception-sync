@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>InceptionNotesSync</servlet-name>
-        <url-pattern>/hey</url-pattern>
+        <url-pattern>/http</url-pattern>
     </servlet-mapping>
     <context-param>
         <param-name>org.apache.tomcat.websocket.textBufferSize</param-name>
