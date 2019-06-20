@@ -80,6 +80,10 @@ class Client constructor(internal val on: On, val world: World,
         val show = show!!
 
         for (propSet in on<NoteStore>().changesUnderNoteForClientToken(clientId, Arango.id(show), personId)) {
+            if (propSet.props.isEmpty()) {
+                continue
+            }
+
             val note = Note()
             note.id = propSet.noteId
 

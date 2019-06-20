@@ -32,7 +32,7 @@ object Arango {
                 val arangoDatabase = ArangoDB.Builder()
                         .user(DB_USER)
                         .password(DB_PASS)
-                        .useProtocol(Protocol.VST)
+                        .useProtocol(Protocol.HTTP_VPACK)
                         .acquireHostList(false)
                         .build()
                         .db(DB_DATABASE)
