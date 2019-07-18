@@ -2,11 +2,11 @@ package com.inceptionnotes.sync.ws
 
 
 import com.google.gson.JsonArray
-import com.inceptionnotes.sync.events.Event
 import com.inceptionnotes.sync.events.ServerEvent
 import com.inceptionnotes.sync.util.Events
 import com.inceptionnotes.sync.util.HttpTransport
 import com.inceptionnotes.sync.util.Json
+import com.inceptionnotes.sync.util.Outbox
 import com.inceptionnotes.sync.world.Client
 import com.inceptionnotes.sync.world.Server
 import java.io.IOException
@@ -24,8 +24,8 @@ class WebsocketClient {
     lateinit var client: Client
         private set
 
-    private val outbox = mutableListOf<Event>()
     private var clientToken: String? = null
+    private val outbox = Outbox()
 
     @OnOpen
     fun onOpen(session: Session, endpointConfig: EndpointConfig) {
@@ -33,9 +33,10 @@ class WebsocketClient {
 
         session.maxIdleTimeout = MINUTES.toMillis(5)
         server = endpointConfig.userProperties["server"] as Server
-        client = Client(server.on, server.world, {
+        client = Client(server.on, {
             clientToken = it
             server.on<HttpTransport>().register(it, this::onHttpMessage)
+            client.send(ServerEvent("identified"))
         }) {
             outbox.add(it)
             flushOutbox()
@@ -55,27 +56,14 @@ class WebsocketClient {
             ))
         }
 
-        val response = outboxToString()
+        val response = outbox.json()
         outbox.clear()
         return response
     }
 
-    private fun outboxToString(): String {
-        val outboxEvents = JsonArray()
-
-        outbox.forEach {
-            val event = JsonArray()
-            event.add(Events.actions[it.javaClass])
-            event.add(Json.json.toJsonTree(it))
-            outboxEvents.add(event)
-        }
-
-        return Json.json.toJson(outboxEvents)
-    }
-
     private fun flushOutbox() {
         try {
-            val outboxString = outboxToString()
+            val outboxString = outbox.json()
 
             if (outboxString.length < 1000) {
                 session.basicRemote.sendText(outboxString)

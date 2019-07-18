@@ -3,6 +3,7 @@ package com.inceptionnotes.sync.events
 import com.inceptionnotes.sync.objects.Note
 import com.inceptionnotes.sync.store.NoteStore
 import com.inceptionnotes.sync.world.Client
+import com.inceptionnotes.sync.world.World
 import java.util.*
 
 /**
@@ -87,7 +88,7 @@ class SyncEvent : Event {
 
         flush(client, syncNotes)
 
-        client.world.onNotesChanged(notes, client)
+        client.on<World>().onNotesChanged(notes, client)
     }
 
     private fun flush(client: Client, notes: List<Note>) {

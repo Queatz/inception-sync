@@ -16,9 +16,7 @@ class WebsocketServer : ServerEndpointConfig.Configurator() {
         internal val on = On()
     }
 
-    private val server = Server(on)
-
     override fun modifyHandshake(conf: ServerEndpointConfig, req: HandshakeRequest, resp: HandshakeResponse) {
-        conf.userProperties["server"] = server
+        conf.userProperties["server"] = on<Server>()
     }
 }

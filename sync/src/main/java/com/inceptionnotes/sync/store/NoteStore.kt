@@ -4,6 +4,7 @@ import com.arangodb.ArangoDBException
 import com.arangodb.entity.BaseDocument
 import com.arangodb.model.AqlQueryOptions
 import com.google.gson.JsonArray
+import com.inceptionnotes.sync.objects.ClientObject
 import com.inceptionnotes.sync.util.Json
 import com.queatz.on.On
 import java.io.IOException
@@ -26,7 +27,7 @@ class NoteStore(on: On) {
             Arango.db.query(AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE, params, AQL_QUERY_OPTIONS, String::class.java).use { arangoCursor ->
                 arangoCursor.asListRemaining()
                         .stream().map { str ->
-                            val note = Json.json.fromJson<JsonArray>(str, JsonArray::class.java)
+                            val note = Json.json.fromJson(str, JsonArray::class.java)
 
                             val props = ArrayList<NoteProp>()
                             note.get(1).asJsonArray.forEach { jsonElement ->
@@ -121,13 +122,24 @@ class NoteStore(on: On) {
         }
     }
 
-    fun getClient(personId: String?, token: String?): BaseDocument {
+    fun getClient(personId: String?, token: String?): ClientObject {
         val params = HashMap<String, Any?>()
         params[AQL_PARAM_PERSON] = personId
         params[AQL_PARAM_TOKEN] = token
 
         return execute(params) {
-            Arango.db.query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, BaseDocument::class.java).use { arangoCursor -> arangoCursor.next() }
+            Arango.db.query(AQL_UPSERT_CLIENT, params, AQL_QUERY_OPTIONS, ClientObject::class.java).use { arangoCursor -> arangoCursor.next() }
+        }
+    }
+
+    fun setClientView(personId: String?, token: String, view: String) {
+        val params = HashMap<String, Any?>()
+        params[AQL_PARAM_PERSON] = personId
+        params[AQL_PARAM_TOKEN] = token
+        params[AQL_PARAM_VIEW] = view
+
+        execute(params) {
+            Arango.db.query(AQL_UPSERT_CLIENT_VIEW, params, AQL_QUERY_OPTIONS, Void::class.java).use { }
         }
     }
 
@@ -173,6 +185,7 @@ class NoteStore(on: On) {
         const val AQL_PARAM_PERSON = "person"
         const val AQL_PARAM_PROP = "prop"
         const val AQL_PARAM_VALUE = "value"
+        const val AQL_PARAM_VIEW = "view"
 
         const val AQL_QUERY_CHANGES_FOR_CLIENT_VISIBLE_FROM_NOTE = "LET visible = APPEND(\n" +
                 "    (FOR note IN entities FILTER note._id == @note RETURN note),\n" +
@@ -237,6 +250,11 @@ class NoteStore(on: On) {
                 "    UPDATE {}\n" +
                 "    IN entities\n" +
                 "    RETURN NEW"
+
+        const val AQL_UPSERT_CLIENT_VIEW = "UPSERT { kind: 'client', person: @person, token: @token, view: @view }\n" +
+                "    INSERT { kind: 'client', person: @person, token: @token, view: @view }\n" +
+                "    UPDATE { view: @view }\n" +
+                "    IN entities"
 
         const val AQL_UPDATE_RELATIONSHIPS_REMOVE_STEP = "FOR relationship IN relationships FILTER relationship._from == @note\n" +
                 "        AND relationship.kind == @prop\n" +

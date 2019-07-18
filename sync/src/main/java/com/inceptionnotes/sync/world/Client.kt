@@ -13,13 +13,18 @@ import java.util.*
  * Created by jacob on 1/20/18.
  */
 
-class Client constructor(internal val on: On, val world: World,
+class Client constructor(internal val on: On,
                          private val onClientIdentified: (String) -> Unit,
                          private val onSendMessage: (Event) -> Unit) {
     // Track client state
     var show: String? = null
         set(value) {
             field = value
+
+            if (value != null) clientToken?.let {
+                on<NoteStore>().setClientView(personId, it, value)
+            }
+
             sendUpdatedPropsFromShow()
         }
     var personToken: String? = null

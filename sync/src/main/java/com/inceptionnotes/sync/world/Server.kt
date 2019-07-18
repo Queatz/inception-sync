@@ -7,8 +7,6 @@ import com.queatz.on.On
  */
 
 class Server(internal val on: On) {
-    val world = World(on)
-
-    fun join(client: Client) = world.join(client)
-    fun leave(client: Client) = world.leave(client)
+    fun join(client: Client) = on<World>().join(client)
+    fun leave(client: Client) = on<World>().leave(client)
 }

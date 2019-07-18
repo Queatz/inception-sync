@@ -9,7 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56a07799-4501-442d-9771-2d4bd4ad4a8b" name="Default" comment="Logic cleanup">
+    <list default="true" id="56a07799-4501-442d-9771-2d4bd4ad4a8b" name="Default" comment="UTF-8">
+      <change afterPath="$PROJECT_DIR$/b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientObject.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Outbox.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/taskHistory/taskHistory.bin" afterDir="false" />
@@ -17,9 +20,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/sync.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sync/sync.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/sync/out/" />
@@ -91,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="247">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#39#371#0" expanded="true" />
               </folding>
@@ -101,40 +109,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state relative-caret-position="455">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
               <folding>
-                <element signature="e#39#256#0" expanded="true" />
+                <element signature="e#38#138#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.0/7e86e161fc98650d829983fc874332b0f9954cfd/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/ServletRequest.java">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="331" column="23" selection-start-line="331" selection-start-column="23" selection-end-line="331" selection-end-column="23" />
+            <state relative-caret-position="234">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,7 +156,6 @@
       <find>world</find>
       <find>_arangoDatabase.collection(DB_COLLECTION_ENTITIES).ensureHashIndex(versionIndex, new HashIndexOptions());</find>
       <find>Arango.db.query</find>
-      <find>ClientToken</find>
       <find>Relationship</find>
       <find>getannon</find>
       <find>getAnonymousLogger</find>
@@ -174,6 +172,10 @@
       <find>100</find>
       <find>todo</find>
       <find>synchr</find>
+      <find>on&lt;</find>
+      <find>on</find>
+      <find>ClientToken</find>
+      <find>getc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,7 +195,6 @@
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.java" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/Event.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/InceptionNotesSync.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/Events.kt" />
@@ -212,26 +213,28 @@
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ServerEvent.kt" />
         <option value="$PROJECT_DIR$/sync/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" />
         <option value="$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/ws/WebsocketClient.kt" />
         <option value="$PROJECT_DIR$/sync/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt" />
         <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Outbox.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientObject.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt" />
+        <option value="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="985" />
-    <option name="width" value="2241" />
+    <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -242,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,11 +255,6 @@
             <path>
               <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="sync" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -289,6 +286,36 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sync" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sync" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sync" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sync" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sync" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sync" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sync" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -299,6 +326,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sync" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inception-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inception-backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sync" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sync" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -327,6 +364,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560954095112</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="UTF-8">
+      <created>1560994792337</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560994792338</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -616,7 +661,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="985" y="0" width="2241" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Build Variants" order="0" side_tool="true" />
@@ -624,7 +669,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Captures" order="3" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.14597544" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17412141" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="7" />
       <window_info id="Resources Explorer" order="8" weight="0.32960597" />
@@ -635,7 +680,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.39612487" />
       <window_info anchor="bottom" id="Gradle Console" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32938644" />
       <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.17330463" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39289558" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -703,7 +748,8 @@
     <MESSAGE value="First test" />
     <MESSAGE value="Hybrid HTTP/WS Server" />
     <MESSAGE value="Logic cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logic cleanup" />
+    <MESSAGE value="UTF-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="UTF-8" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -725,41 +771,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/b2da9f8444128651758719856de579eacff7f387/gson-2.8.2-sources.jar!/com/google/gson/JsonElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/958c401b129f64de74af4b11a0894693edfa168d/kotlin-stdlib-common-1.3.31-sources.jar!/kotlin/util/Standard.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/4.3.4-SNAPSHOT/e04c2be91770115cd3bda3997abbed7cd9844cbb/arangodb-java-driver-4.3.4-SNAPSHOT-sources.jar!/com/arangodb/ArangoDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="361" column="7" lean-forward="true" selection-start-line="361" selection-start-column="7" selection-end-line="361" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Closeable.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Console.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/5.0.5/9dbff5a7555d25bc1ca09bcaf213517a187d9295/arangodb-java-driver-5.0.5-sources.jar!/com/arangodb/internal/InternalArangoDBBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -817,35 +828,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteProp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
@@ -859,20 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -894,27 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ServerEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -942,51 +890,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/5.0.5/9dbff5a7555d25bc1ca09bcaf213517a187d9295/arangodb-java-driver-5.0.5-sources.jar!/com/arangodb/Protocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
-          <folding>
-            <element signature="e#37#527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-          <folding>
-            <element signature="e#41#168#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,40 +911,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/world/Server.kt">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/ws/WebsocketServer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/ws/WebsocketClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="25">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#39#371#0" expanded="true" />
+            <element signature="e#39#256#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,27 +928,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/Arango.kt">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SimpleMessageServerEvent.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        <state relative-caret-position="104">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ServerEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/IdentifyEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/world/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/ws/WebsocketServer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketServer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/SyncEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/ws/WebsocketClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="59" column="23" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/ws/WebsocketClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
           <folding>
-            <element signature="e#39#256#0" expanded="true" />
+            <element signature="e#37#526#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/World.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="234">
+          <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/InceptionNotesSync.kt">
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Relationship.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="312">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/PropSet.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/bin/main/com/inceptionnotes/sync/store/NoteStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="123" column="66" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arangodb/arangodb-java-driver/5.0.5/9dbff5a7555d25bc1ca09bcaf213517a187d9295/arangodb-java-driver-5.0.5-sources.jar!/com/arangodb/entity/BaseDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientObject.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/io/Closeable.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="134" column="8" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Outbox.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#38#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Person.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/Note.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="e#41#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/objects/ClientToken.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/events/ShowEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/world/Client.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#39#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/HttpTransport.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#38#138#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
