@@ -11,11 +11,9 @@ class Outbox {
         outbox.add(event)
     }
 
-
     fun clear() {
         outbox.clear()
     }
-
 
     fun json(): String {
         val outboxEvents = JsonArray()

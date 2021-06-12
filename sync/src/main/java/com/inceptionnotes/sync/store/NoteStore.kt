@@ -38,7 +38,7 @@ class NoteStore(on: On) {
                             }
 
                             PropSet(note.get(0).asString, props)
-                        }.collect(Collectors.toList<PropSet>())
+                        }.collect(Collectors.toList())
             }
         }
 

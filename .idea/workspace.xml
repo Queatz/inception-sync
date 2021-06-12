@@ -31,54 +31,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56a07799-4501-442d-9771-2d4bd4ad4a8b" name="Default" comment="UTF-8">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0-milestone-1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__On_0_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__annotations_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__arangodb_java_driver_5_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__byte_buddy_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__byte_buddy_agent_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_1_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__gson_2_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__httpclient_4_5_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__httpcore_4_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jackson_core_2_9_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_mail_api_1_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_api_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_websocket_api_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_common_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_jdk7_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__kotlin_stdlib_jdk8_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_core_2_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_inline_2_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__mockito_kotlin_2_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_3_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__slf4j_api_1_7_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__velocypack_1_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_arangodb_velocypack_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_2_23_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inception-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sync/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sync/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync/sync.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/store/NoteStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Outbox.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/main/java/com/inceptionnotes/sync/util/Outbox.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sync/src/test/java/com/inceptionnotes/sync/world/WorldTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,36 +70,18 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
+                <item name="inception-sync" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name="inception-backend" type="2d1252cf:ModuleNode" />
+                <item name="inception-sync" type="f1a62948:ProjectNode" />
+                <item name="sync" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name="inception-backend" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name=":sync" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name=":sync" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="inception-backend" type="f1a62948:ProjectNode" />
-                <item name=":sync" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="inception-sync" type="f1a62948:ProjectNode" />
+                <item name="sync" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -192,6 +140,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -199,7 +148,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -225,7 +174,7 @@
       <command value=" [" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.inception-backend:sync [war]">
+  <component name="RunManager" selected="Gradle.inception-backend:sync [test]">
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -259,40 +208,9 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <configuration name="WorldTest (1)" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inception-sync.sync" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.inceptionnotes.sync.world.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.inceptionnotes.sync.world" />
-      <option name="MAIN_CLASS_NAME" value="com.inceptionnotes.sync.world.WorldTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WorldTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="inception-sync.sync" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.inceptionnotes.sync.world.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.inceptionnotes.sync" />
-      <option name="MAIN_CLASS_NAME" value="com.inceptionnotes.sync.WorldTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorldTest.noteChanged" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inception-sync.sync" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.inceptionnotes.sync.world.*" />
@@ -301,8 +219,10 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.inceptionnotes.sync.world" />
       <option name="MAIN_CLASS_NAME" value="com.inceptionnotes.sync.world.WorldTest" />
-      <option name="METHOD_NAME" value="noteChanged" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -359,6 +279,26 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="inception-sync [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--exclude-task test" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -368,12 +308,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Android JUnit.WorldTest" />
+      <item itemvalue="Gradle.inception-backend:sync [war]" />
+      <item itemvalue="Gradle.inception-backend:sync [test]" />
+      <item itemvalue="Gradle.inception-sync [clean build]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.WorldTest" />
         <item itemvalue="Gradle.inception-backend:sync [test]" />
-        <item itemvalue="Android JUnit.WorldTest (1)" />
-        <item itemvalue="Android JUnit.WorldTest.noteChanged" />
+        <item itemvalue="Gradle.inception-sync [clean build]" />
+        <item itemvalue="Android JUnit.WorldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -438,40 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1560994792338</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Maintenance">
+      <created>1623469555931</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623469555931</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 07s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 13s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 40s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 44s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 54m 51s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 19h 55m 38s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.09 at 20h 00m 40s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="WorldTest_(1) - 2019.06.10 at 08h 50m 11s.xml">
-      <configuration name="WorldTest (1)" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="inception-backend_sync_[test] - 2019.06.10 at 10h 01m 56s.xml">
-      <configuration name="inception-backend:sync [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="WorldTest - 2019.06.17 at 08h 39m 47s.xml">
-      <configuration name="WorldTest" configurationId="AndroidJUnit" />
-    </history-entry>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -508,13 +428,42 @@
     <MESSAGE value="Hybrid HTTP/WS Server" />
     <MESSAGE value="Logic cleanup" />
     <MESSAGE value="UTF-8" />
-    <option name="LAST_COMMIT_MESSAGE" value="UTF-8" />
+    <MESSAGE value="Maintenance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maintenance" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3854" y="276" width="672" height="678" key="search.everywhere.popup" timestamp="1623469423223">
+    <state x="3674" y="133" width="1024" height="852" key="#Project_Structure" timestamp="1623469577333">
       <screen x="1920" y="0" width="3840" height="1080" />
     </state>
-    <state x="3854" y="276" width="672" height="678" key="search.everywhere.popup/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623469423223" />
+    <state x="3674" y="133" width="1024" height="852" key="#Project_Structure/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623469577333" />
+    <state x="3561" y="172" width="1257" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623470586783">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state x="3561" y="172" width="1257" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470586783" />
+    <state x="3928" y="444" width="515" height="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623469528908">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state x="3928" y="444" width="515" height="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623469528908" />
+    <state width="2080" height="161" key="GridCell.Tab.0.bottom" timestamp="1623470023118">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state width="2080" height="161" key="GridCell.Tab.0.bottom/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470023118" />
+    <state width="2080" height="161" key="GridCell.Tab.0.center" timestamp="1623470023118">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state width="2080" height="161" key="GridCell.Tab.0.center/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470023118" />
+    <state width="2080" height="161" key="GridCell.Tab.0.left" timestamp="1623470023118">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state width="2080" height="161" key="GridCell.Tab.0.left/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470023118" />
+    <state width="2080" height="161" key="GridCell.Tab.0.right" timestamp="1623470023118">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state width="2080" height="161" key="GridCell.Tab.0.right/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470023118" />
+    <state x="3854" y="276" width="672" height="678" key="search.everywhere.popup" timestamp="1623470152122">
+      <screen x="1920" y="0" width="3840" height="1080" />
+    </state>
+    <state x="3854" y="276" width="672" height="678" key="search.everywhere.popup/1920.0.3840.1080/0.32.1920.1048@1920.0.3840.1080" timestamp="1623470152122" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -534,80 +483,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Android-Gradle</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>sync</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

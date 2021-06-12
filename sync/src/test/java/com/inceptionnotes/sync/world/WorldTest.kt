@@ -5,6 +5,7 @@ import com.inceptionnotes.sync.events.IdentifyEvent
 import com.inceptionnotes.sync.events.ShowEvent
 import com.inceptionnotes.sync.events.SyncEvent
 import com.inceptionnotes.sync.objects.Note
+import com.inceptionnotes.sync.ws.WebsocketServer.Companion.on
 import com.nhaarman.mockitokotlin2.*
 import org.junit.Assert
 import org.junit.Before
@@ -51,13 +52,13 @@ class WorldTest {
     }
 }
 
-class ClientTest constructor(private val server: Server) {
+class ClientTest constructor(server: Server) {
     private val onSendMessage = mock<(Event) -> Unit>()
-    private val client = Client(server.world, onSendMessage)
+    private val client = Client(on, {}, onSendMessage)
 
     init {
         val onSendMessage = mock<(Event) -> Unit>()
-        val client = Client(server.world, onSendMessage)
+        val client = Client(on, {}, onSendMessage)
         server.join(client)
     }
 
